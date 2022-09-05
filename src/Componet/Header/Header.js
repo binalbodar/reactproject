@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header(props) {
     return (
@@ -48,7 +49,10 @@ function Header(props) {
                     </button>
                     <div className="collapse navbar-collapse" id="ftco-nav">
                         <ul className="navbar-nav ml-auto">
-                            <li className="nav-item active"><a href="index.html" className="nav-link">Home</a></li>
+                            <li className="nav-item active">
+                                {/* <a href="index.html" className="nav-link">Home</a> */}
+                                <NavLink exact to={"/"} className="nav-link">Home</NavLink>
+                            </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
                                 <div className="dropdown-menu" aria-labelledby="dropdown04">
@@ -58,7 +62,10 @@ function Header(props) {
                                     <a className="dropdown-item" href="checkout.html">Checkout</a>
                                 </div>
                             </li>
-                            <li className="nav-item"><a href="about.html" className="nav-link">About</a></li>
+                            <li className="nav-item">
+                                {/* <a href="about.html" className="nav-link">About</a> */}
+                                <NavLink exact to={"/about  "} className="nav-link">About</NavLink>
+                            </li>
                             <li className="nav-item"><a href="blog.html" className="nav-link">Blog</a></li>
                             <li className="nav-item"><a href="contact.html" className="nav-link">Contact</a></li>
                             <li className="nav-item cta cta-colored"><a href="cart.html" className="nav-link"><span className="icon-shopping_cart" />[0]</a></li>
@@ -67,7 +74,6 @@ function Header(props) {
                 </div>
             </nav>
         </div>
-
     );
 }
 
