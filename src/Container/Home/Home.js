@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home(props) {
     return (
-        <div>
+      <div>
   <section id="home-section" className="hero">
     <div className="home-slider owl-carousel">
       <div className="slider-item js-fullheight">
@@ -613,7 +613,6 @@ function Home(props) {
     </div>
   </section>
 </div>
-
 
     );
 }
