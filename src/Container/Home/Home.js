@@ -3,627 +3,214 @@ import React from 'react';
 function Home(props) {
   return (
     <>
-      <section id="home-section" classname="hero">
-        <div classname="home-slider owl-carousel">
-          <div classname="slider-item js-fullheight">
-            <div classname="overlay">
-              <div classname="container-fluid p-0">
-                <div classname="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-                  <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <img classname="one-third order-md-last img-fluid" src="images/bg_1.png" alt="abc" />
-                      </div>
-                    </div>
-                    <div classname="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                      <div classname="text">
-                        <span classname="subheading">#New Arrival</span>
-                        <div classname="horizontal">
-                          <h1 classname="mb-4 mt-3">Shoes Collection 2019</h1>
-                          <p classname="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-                          <p><a href="#" classname="btn-custom">Discover Now</a></p>
-                        </div>
-                      </div>
+      <div>
+        <div className="modal fade bg-white" id="templatemo_search" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog modal-lg" role="document">
+            <div className="w-100 pt-1 mb-5 text-right">
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+            </div>
+            <form action method="get" className="modal-content modal-body border-0 p-0">
+              <div className="input-group mb-2">
+                <input type="text" className="form-control" id="inputModalSearch" name="q" placeholder="Search ..." />
+                <button type="submit" className="input-group-text bg-success text-light">
+                  <i className="fa fa-fw fa-search text-white" />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="template-mo-zay-hero-carousel" className="carousel slide" data-bs-ride="carousel">
+          <ol className="carousel-indicators">
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to={0} className="active" />
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to={1} />
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to={2} />
+          </ol>
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div className="container">
+                <div className="row p-5">
+                  <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
+                    <img className="img-fluid" src="./img/banner_img_01.jpg" alt />
+                  </div>
+                  <div className="col-lg-6 mb-0 d-flex align-items-center">
+                    <div className="text-align-left align-self-center">
+                      <h1 className="h1 text-success"><b>Zay</b> eCommerce</h1>
+                      <h3 className="h2">Tiny and Perfect eCommerce Template</h3>
+                      <p>
+                        Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1).
+                        This template is 100% free provided by <a rel="sponsored" className="text-success" href="https://templatemo.com" target="_blank">TemplateMo</a> website.
+                        Image credits go to <a rel="sponsored" className="text-success" href="https://stories.freepik.com/" target="_blank">Freepik Stories</a>,
+                        <a rel="sponsored" className="text-success" href="https://unsplash.com/" target="_blank">Unsplash</a> and
+                        <a rel="sponsored" className="text-success" href="https://icons8.com/" target="_blank">Icons 8</a>.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div classname="slider-item js-fullheight">
-                <div classname="overlay">
-                  <div classname="container-fluid p-0">
-                    <div classname="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
-                      <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                          <div className="carousel-item active">
-                            <img classname="one-third order-md-last img-fluid" src="images/bg_2.png" alt="mnp" />
-                          </div>
-                        </div>
-                        <div classname="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                          <div classname="text">
-                            <span classname="subheading">#New Arrival</span>
-                            <div classname="horizontal">
-                              <h1 classname="mb-4 mt-3">New Shoes Winter Collection</h1>
-                              <p classname="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-                              <p><a href="#" classname="btn-custom">Discover Now</a></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+            </div>
+            <div className="carousel-item">
+              <div className="container">
+                <div className="row p-5">
+                  <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
+                    <img className="img-fluid" src="./img/banner_img_02.jpg" alt />
+                  </div>
+                  <div className="col-lg-6 mb-0 d-flex align-items-center">
+                    <div className="text-align-left">
+                      <h1 className="h1">Proident occaecat</h1>
+                      <h3 className="h2">Aliquip ex ea commodo consequat</h3>
+                      <p>
+                        You are permitted to use this Zay CSS template for your commercial websites.
+                        You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              </div></div></div></section>
+            </div>
+            <div className="carousel-item">
+              <div className="container">
+                <div className="row p-5">
+                  <div className="mx-auto col-md-8 col-lg-6 order-lg-last">
+                    <img className="img-fluid" src="img/banner_img_03.jpg" alt />
+                  </div>
+                  <div className="col-lg-6 mb-0 d-flex align-items-center">
+                    <div className="text-align-left">
+                      <h1 className="h1">Repr in voluptate</h1>
+                      <h3 className="h2">Ullamco laboris nisi ut </h3>
+                      <p>
+                        We bring you 100% free CSS templates for your websites.
+                        If you wish to support TemplateMo, please make a small contribution via PayPal or tell your friends about our website. Thank you.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a className="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+            <i className="fas fa-chevron-left" />
+          </a>
+          <a className="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+            <i className="fas fa-chevron-right" />
+          </a>
+        </div>
+        <section className="container py-5">
+          <div className="row text-center pt-3">
+            <div className="col-lg-6 m-auto">
+              <h1 className="h1">Categories of The Month</h1>
+              <p>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12 col-md-4 p-5 mt-3">
+              <a href="#"><img src="img/category_img_01.jpg" className="rounded-circle img-fluid border" /></a>
+              <h5 className="text-center mt-3 mb-3">Watches</h5>
+              <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
+            </div>
+            <div className="col-12 col-md-4 p-5 mt-3">
+              <a href="#"><img src="img/category_img_02.jpg" className="rounded-circle img-fluid border" /></a>
+              <h2 className="h5 text-center mt-3 mb-3">Shoes</h2>
+              <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
+            </div>
+            <div className="col-12 col-md-4 p-5 mt-3">
+              <a href="#"><img src="img/category_img_03.jpg" className="rounded-circle img-fluid border" /></a>
+              <h2 className="h5 text-center mt-3 mb-3">Accessories</h2>
+              <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
+            </div>
+          </div>
+        </section>
+        <section className="bg-light">
+          <div className="container py-5">
+            <div className="row text-center py-3">
+              <div className="col-lg-6 m-auto">
+                <h1 className="h1">Featured Product</h1>
+                <p>
+                  Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident.
+                </p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-12 col-md-4 mb-4">
+                <div className="card h-100">
+                  <a href="shop-single.html">
+                    <img src="img/feature_prod_01.jpg" className="card-img-top" alt="..." />
+                  </a>
+                  <div className="card-body">
+                    <ul className="list-unstyled d-flex justify-content-between">
+                      <li>
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-muted fa fa-star" />
+                        <i className="text-muted fa fa-star" />
+                      </li>
+                      <li className="text-muted text-right">$240.00</li>
+                    </ul>
+                    <a href="shop-single.html" className="h2 text-decoration-none text-dark">Gym Weight</a>
+                    <p className="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
+                    </p>
+                    <p className="text-muted">Reviews (24)</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-md-4 mb-4">
+                <div className="card h-100">
+                  <a href="shop-single.html">
+                    <img src="img/feature_prod_02.jpg" className="card-img-top" alt="..." />
+                  </a>
+                  <div className="card-body">
+                    <ul className="list-unstyled d-flex justify-content-between">
+                      <li>
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-muted fa fa-star" />
+                        <i className="text-muted fa fa-star" />
+                      </li>
+                      <li className="text-muted text-right">$480.00</li>
+                    </ul>
+                    <a href="shop-single.html" className="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
+                    <p className="card-text">
+                      Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.
+                    </p>
+                    <p className="text-muted">Reviews (48)</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-md-4 mb-4">
+                <div className="card h-100">
+                  <a href="shop-single.html">
+                    <img src="img/feature_prod_03.jpg" className="card-img-top" alt="..." />
+                  </a>
+                  <div className="card-body">
+                    <ul className="list-unstyled d-flex justify-content-between">
+                      <li>
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-warning fa fa-star" />
+                        <i className="text-warning fa fa-star" />
+                      </li>
+                      <li className="text-muted text-right">$360.00</li>
+                    </ul>
+                    <a href="shop-single.html" className="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
+                    <p className="card-text">
+                      Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.
+                    </p>
+                    <p className="text-muted">Reviews (74)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
-      <section className="ftco-section ftco-no-pt ftco-no-pb">
-        <div className="container">
-          <div className="row no-gutters ftco-services">
-            <div className="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
-              <div className="media block-6 services p-4 py-md-5">
-                <div className="icon d-flex justify-content-center align-items-center mb-4">
-                  <span className="flaticon-bag" />
-                </div>
-                <div className="media-body">
-                  <h3 className="heading">Free Shipping</h3>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
-              <div className="media block-6 services p-4 py-md-5">
-                <div className="icon d-flex justify-content-center align-items-center mb-4">
-                  <span className="flaticon-customer-service" />
-                </div>
-                <div className="media-body">
-                  <h3 className="heading">Support Customer</h3>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
-              <div className="media block-6 services p-4 py-md-5">
-                <div className="icon d-flex justify-content-center align-items-center mb-4">
-                  <span className="flaticon-payment-security" />
-                </div>
-                <div className="media-body">
-                  <h3 className="heading">Secure Payments</h3>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="ftco-section bg-light">
-        <div className="container">
-          <div className="row justify-content-center mb-3 pb-3">
-            <div className="col-md-12 heading-section text-center ftco-animate">
-              <h2 className="mb-4">New Shoes Arrival</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-              <div className="product d-flex flex-column">
-                <a href="#" className="img-prod"><img className="img-fluid" src="images/product-1.png" alt="Colorlib Template" />
-                  <div className="overlay" />
-                </a>
-                <div className="text py-3 pb-4 px-3">
-                  <div className="d-flex">
-                    <div className="cat">
-                      <span>Lifestyle</span>
-                    </div>
-                    <div className="rating">
-                      <p className="text-right mb-0">
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                      </p>
-                    </div>
-                  </div>
-                  <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                  <div className="pricing">
-                    <p className="price"><span>$120.00</span></p>
-                  </div>
-                  <p className="bottom-area d-flex px-3">
-                    <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1" /></span></a>
-                    <a href="#" className="buy-now text-center py-2">Buy now<span><i className="ion-ios-cart ml-1" /></span></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-              <div className="product d-flex flex-column">
-                <a href="#" className="img-prod"><img className="img-fluid" src="images/product-2.png" alt="Colorlib Template" />
-                  <span className="status">50% Off</span>
-                  <div className="overlay" />
-                </a>
-                <div className="text py-3 pb-4 px-3">
-                  <div className="d-flex">
-                    <div className="cat">
-                      <span>Lifestyle</span>
-                    </div>
-                    <div className="rating">
-                      <p className="text-right mb-0">
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                      </p>
-                    </div>
-                  </div>
-                  <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                  <div className="pricing">
-                    <p className="price"><span className="mr-2 price-dc">$120.00</span><span className="price-sale">$80.00</span></p>
-                  </div>
-                  <p className="bottom-area d-flex px-3">
-                    <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1" /></span></a>
-                    <a href="#" className="buy-now text-center py-2">Buy now<span><i className="ion-ios-cart ml-1" /></span></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-              <div className="product">
-                <a href="#" className="img-prod"><img className="img-fluid" src="images/product-3.png" alt="Colorlib Template" />
-                  <div className="overlay" />
-                </a>
-                <div className="text py-3 pb-4 px-3">
-                  <div className="d-flex">
-                    <div className="cat">
-                      <span>Lifestyle</span>
-                    </div>
-                    <div className="rating">
-                      <p className="text-right mb-0">
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                      </p>
-                    </div>
-                  </div>
-                  <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                  <div className="pricing">
-                    <p className="price"><span>$120.00</span></p>
-                  </div>
-                  <p className="bottom-area d-flex px-3">
-                    <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1" /></span></a>
-                    <a href="#" className="buy-now text-center py-2">Buy now<span><i className="ion-ios-cart ml-1" /></span></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-              <div className="product">
-                <a href="#" className="img-prod"><img className="img-fluid" src="images/product-4.png" alt="Colorlib Template" />
-                  <div className="overlay" />
-                </a>
-                <div className="text py-3 pb-4 px-3">
-                  <div className="d-flex">
-                    <div className="cat">
-                      <span>Lifestyle</span>
-                    </div>
-                    <div className="rating">
-                      <p className="text-right mb-0">
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                      </p>
-                    </div>
-                  </div>
-                  <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                  <div className="pricing">
-                    <p className="price"><span>$120.00</span></p>
-                  </div>
-                  <p className="bottom-area d-flex px-3">
-                    <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1" /></span></a>
-                    <a href="#" className="buy-now text-center py-2">Buy now<span><i className="ion-ios-cart ml-1" /></span></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-              <div className="product d-flex flex-column">
-                <a href="#" className="img-prod"><img className="img-fluid" src="images/product-5.png" alt="Colorlib Template" />
-                  <div className="overlay" />
-                </a>
-                <div className="text py-3 pb-4 px-3">
-                  <div className="d-flex">
-                    <div className="cat">
-                      <span>Lifestyle</span>
-                    </div>
-                    <div className="rating">
-                      <p className="text-right mb-0">
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                      </p>
-                    </div>
-                  </div>
-                  <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                  <div className="pricing">
-                    <p className="price"><span>$120.00</span></p>
-                  </div>
-                  <p className="bottom-area d-flex px-3">
-                    <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1" /></span></a>
-                    <a href="#" className="buy-now text-center py-2">Buy now<span><i className="ion-ios-cart ml-1" /></span></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-              <div className="product d-flex flex-column">
-                <a href="#" className="img-prod"><img className="img-fluid" src="images/product-6.png" alt="Colorlib Template" />
-                  <span className="status">50% Off</span>
-                  <div className="overlay" />
-                </a>
-                <div className="text py-3 pb-4 px-3">
-                  <div className="d-flex">
-                    <div className="cat">
-                      <span>Lifestyle</span>
-                    </div>
-                    <div className="rating">
-                      <p className="text-right mb-0">
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                      </p>
-                    </div>
-                  </div>
-                  <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                  <div className="pricing">
-                    <p className="price"><span className="mr-2 price-dc">$120.00</span><span className="price-sale">$80.00</span></p>
-                  </div>
-                  <p className="bottom-area d-flex px-3">
-                    <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1" /></span></a>
-                    <a href="#" className="buy-now text-center py-2">Buy now<span><i className="ion-ios-cart ml-1" /></span></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-              <div className="product">
-                <a href="#" className="img-prod"><img className="img-fluid" src="images/product-7.png" alt="Colorlib Template" />
-                  <div className="overlay" />
-                </a>
-                <div className="text py-3 pb-4 px-3">
-                  <div className="d-flex">
-                    <div className="cat">
-                      <span>Lifestyle</span>
-                    </div>
-                    <div className="rating">
-                      <p className="text-right mb-0">
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                      </p>
-                    </div>
-                  </div>
-                  <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                  <div className="pricing">
-                    <p className="price"><span>$120.00</span></p>
-                  </div>
-                  <p className="bottom-area d-flex px-3">
-                    <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1" /></span></a>
-                    <a href="#" className="buy-now text-center py-2">Buy now<span><i className="ion-ios-cart ml-1" /></span></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
-              <div className="product">
-                <a href="#" className="img-prod"><img className="img-fluid" src="images/product-8.png" alt="Colorlib Template" />
-                  <div className="overlay" />
-                </a>
-                <div className="text py-3 pb-4 px-3">
-                  <div className="d-flex">
-                    <div className="cat">
-                      <span>Lifestyle</span>
-                    </div>
-                    <div className="rating">
-                      <p className="text-right mb-0">
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                        <a href="#"><span className="ion-ios-star-outline" /></a>
-                      </p>
-                    </div>
-                  </div>
-                  <h3><a href="#">Nike Free RN 2019 iD</a></h3>
-                  <div className="pricing">
-                    <p className="price"><span>$120.00</span></p>
-                  </div>
-                  <p className="bottom-area d-flex px-3">
-                    <a href="#" className="add-to-cart text-center py-2 mr-1"><span>Add to cart <i className="ion-ios-add ml-1" /></span></a>
-                    <a href="#" className="buy-now text-center py-2">Buy now<span><i className="ion-ios-cart ml-1" /></span></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="ftco-section ftco-choose ftco-no-pb ftco-no-pt">
-        <div className="container">
-          <div className="row no-gutters">
-            <div className="col-lg-4">
-              <div className="choose-wrap divider-one img p-5 d-flex align-items-end" style={{ backgroundImage: 'url(images/choose-1.jpg)' }}>
-                <div className="text text-center text-white px-2">
-                  <span className="subheading">Men's Shoes</span>
-                  <h2>Men's Collection</h2>
-                  <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                  <p><a href="#" className="btn btn-black px-3 py-2">Shop now</a></p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-8">
-              <div className="row no-gutters choose-wrap divider-two align-items-stretch">
-                <div className="col-md-12">
-                  <div className="choose-wrap full-wrap img align-self-stretch d-flex align-item-center justify-content-end" style={{ backgroundImage: 'url(images/choose-2.jpg)' }}>
-                    <div className="col-md-7 d-flex align-items-center">
-                      <div className="text text-white px-5">
-                        <span className="subheading">Women's Shoes</span>
-                        <h2>Women's Collection</h2>
-                        <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                        <p><a href="#" className="btn btn-black px-3 py-2">Shop now</a></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-12">
-                  <div className="row no-gutters">
-                    <div className="col-md-6">
-                      <div className="choose-wrap wrap img align-self-stretch bg-light d-flex align-items-center">
-                        <div className="text text-center px-5">
-                          <span className="subheading">Summer Sale</span>
-                          <h2>Extra 50% Off</h2>
-                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                          <p><a href="#" className="btn btn-black px-3 py-2">Shop now</a></p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="choose-wrap wrap img align-self-stretch d-flex align-items-center" style={{ backgroundImage: 'url(images/choose-3.jpg)' }}>
-                        <div className="text text-center text-white px-5">
-                          <span className="subheading">Shoes</span>
-                          <h2>Best Sellers</h2>
-                          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                          <p><a href="#" className="btn btn-black px-3 py-2">Shop now</a></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="ftco-section ftco-deal bg-primary">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <img src="images/prod-1.png" className="img-fluid" alt />
-            </div>
-            <div className="col-md-6">
-              <div className="heading-section heading-section-white">
-                <span className="subheading">Deal of the month</span>
-                <h2 className="mb-3">Deal of the month</h2>
-              </div>
-              <div id="timer" className="d-flex mb-4">
-                <div className="time" id="days" />
-                <div className="time pl-4" id="hours" />
-                <div className="time pl-4" id="minutes" />
-                <div className="time pl-4" id="seconds" />
-              </div>
-              <div className="text-deal">
-                <h2><a href="#">Nike Free RN 2019 iD</a></h2>
-                <p className="price"><span className="mr-2 price-dc">$120.00</span><span className="price-sale">$80.00</span></p>
-                <ul className="thumb-deal d-flex mt-4">
-                  <li className="img" style={{ backgroundImage: 'url(images/product-6.png)' }} />
-                  <li className="img" style={{ backgroundImage: 'url(images/product-2.png)' }} />
-                  <li className="img" style={{ backgroundImage: 'url(images/product-4.png)' }} />
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="ftco-section testimony-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5">
-              <div className="services-flow">
-                <div className="services-2 p-4 d-flex ftco-animate">
-                  <div className="icon">
-                    <span className="flaticon-bag" />
-                  </div>
-                  <div className="text">
-                    <h3>Free Shipping</h3>
-                    <p className="mb-0">Separated they live in. A small river named Duden flows</p>
-                  </div>
-                </div>
-                <div className="services-2 p-4 d-flex ftco-animate">
-                  <div className="icon">
-                    <span className="flaticon-heart-box" />
-                  </div>
-                  <div className="text">
-                    <h3>Valuable Gifts</h3>
-                    <p className="mb-0">Separated they live in. A small river named Duden flows</p>
-                  </div>
-                </div>
-                <div className="services-2 p-4 d-flex ftco-animate">
-                  <div className="icon">
-                    <span className="flaticon-payment-security" />
-                  </div>
-                  <div className="text">
-                    <h3>All Day Support</h3>
-                    <p className="mb-0">Separated they live in. A small river named Duden flows</p>
-                  </div>
-                </div>
-                <div className="services-2 p-4 d-flex ftco-animate">
-                  <div className="icon">
-                    <span className="flaticon-customer-service" />
-                  </div>
-                  <div className="text">
-                    <h3>All Day Support</h3>
-                    <p className="mb-0">Separated they live in. A small river named Duden flows</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-7">
-              <div className="heading-section ftco-animate mb-5">
-                <h2 className="mb-4">Our satisfied customer says</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-              </div>
-              <div className="carousel-testimony owl-carousel">
-                <div className="item">
-                  <div className="testimony-wrap">
-                    <div className="user-img mb-4" style={{ backgroundImage: 'url(images/person_1.jpg)' }}>
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                    </div>
-                    <div className="text">
-                      <p className="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                      <p className="name">Garreth Smith</p>
-                      <span className="position">Marketing Manager</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="testimony-wrap">
-                    <div className="user-img mb-4" style={{ backgroundImage: 'url(images/person_2.jpg)' }}>
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                    </div>
-                    <div className="text">
-                      <p className="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                      <p className="name">Garreth Smith</p>
-                      <span className="position">Interface Designer</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="testimony-wrap">
-                    <div className="user-img mb-4" style={{ backgroundImage: 'url(images/person_3.jpg)' }}>
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                    </div>
-                    <div className="text">
-                      <p className="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                      <p className="name">Garreth Smith</p>
-                      <span className="position">UI Designer</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="testimony-wrap">
-                    <div className="user-img mb-4" style={{ backgroundImage: 'url(images/person_1.jpg)' }}>
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                    </div>
-                    <div className="text">
-                      <p className="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                      <p className="name">Garreth Smith</p>
-                      <span className="position">Web Developer</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="testimony-wrap">
-                    <div className="user-img mb-4" style={{ backgroundImage: 'url(images/person_1.jpg)' }}>
-                      <span className="quote d-flex align-items-center justify-content-center">
-                        <i className="icon-quote-left" />
-                      </span>
-                    </div>
-                    <div className="text">
-                      <p className="mb-4 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                      <p className="name">Garreth Smith</p>
-                      <span className="position">System Analyst</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="ftco-gallery">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-8 heading-section text-center mb-4 ftco-animate">
-              <h2 className="mb-4">Follow Us On Instagram</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-            </div>
-          </div>
-        </div>
-        <div className="container-fluid px-0">
-          <div className="row no-gutters">
-            <div className="col-md-4 col-lg-2 ftco-animate">
-              <a href="images/gallery-1.jpg" className="gallery image-popup img d-flex align-items-center" style={{ backgroundImage: 'url(images/gallery-1.jpg)' }}>
-                <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                  <span className="icon-instagram" />
-                </div>
-              </a>
-            </div>
-            <div className="col-md-4 col-lg-2 ftco-animate">
-              <a href="images/gallery-2.jpg" className="gallery image-popup img d-flex align-items-center" style={{ backgroundImage: 'url(images/gallery-2.jpg)' }}>
-                <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                  <span className="icon-instagram" />
-                </div>
-              </a>
-            </div>
-            <div className="col-md-4 col-lg-2 ftco-animate">
-              <a href="images/gallery-3.jpg" className="gallery image-popup img d-flex align-items-center" style={{ backgroundImage: 'url(images/gallery-3.jpg)' }}>
-                <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                  <span className="icon-instagram" />
-                </div>
-              </a>
-            </div>
-            <div className="col-md-4 col-lg-2 ftco-animate">
-              <a href="images/gallery-4.jpg" className="gallery image-popup img d-flex align-items-center" style={{ backgroundImage: 'url(images/gallery-4.jpg)' }}>
-                <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                  <span className="icon-instagram" />
-                </div>
-              </a>
-            </div>
-            <div className="col-md-4 col-lg-2 ftco-animate">
-              <a href="images/gallery-5.jpg" className="gallery image-popup img d-flex align-items-center" style={{ backgroundImage: 'url(images/gallery-5.jpg)' }}>
-                <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                  <span className="icon-instagram" />
-                </div>
-              </a>
-            </div>
-            <div className="col-md-4 col-lg-2 ftco-animate">
-              <a href="images/gallery-6.jpg" className="gallery image-popup img d-flex align-items-center" style={{ backgroundImage: 'url(images/gallery-6.jpg)' }}>
-                <div className="icon mb-4 d-flex align-items-center justify-content-center">
-                  <span className="icon-instagram" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

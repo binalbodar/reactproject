@@ -1,80 +1,95 @@
 import React from 'react';
 
 function Footer(props) {
-    return (
-        <footer className="ftco-footer ftco-section">
-  <div className="container">
-    <div className="row">
-      <div className="mouse">
-        <a href="#" className="mouse-icon">
-          <div className="mouse-wheel"><span className="ion-ios-arrow-up" /></div>
-        </a>
-      </div>
-    </div>
-    <div className="row mb-5">
-      <div className="col-md">
-        <div className="ftco-footer-widget mb-4">
-          <h2 className="ftco-heading-2">Minishop</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-          <ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-            <li className="ftco-animate"><a href="#"><span className="icon-twitter" /></a></li>
-            <li className="ftco-animate"><a href="#"><span className="icon-facebook" /></a></li>
-            <li className="ftco-animate"><a href="#"><span className="icon-instagram" /></a></li>
-          </ul>
-        </div>
-      </div>
-      <div className="col-md">
-        <div className="ftco-footer-widget mb-4 ml-md-5">
-          <h2 className="ftco-heading-2">Menu</h2>
-          <ul className="list-unstyled">
-            <li><a href="#" className="py-2 d-block">Shop</a></li>
-            <li><a href="#" className="py-2 d-block">About</a></li>
-            <li><a href="#" className="py-2 d-block">Journal</a></li>
-            <li><a href="#" className="py-2 d-block">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div className="col-md-4">
-        <div className="ftco-footer-widget mb-4">
-          <h2 className="ftco-heading-2">Help</h2>
-          <div className="d-flex">
-            <ul className="list-unstyled mr-l-5 pr-l-3 mr-4">
-              <li><a href="#" className="py-2 d-block">Shipping Information</a></li>
-              <li><a href="#" className="py-2 d-block">Returns &amp; Exchange</a></li>
-              <li><a href="#" className="py-2 d-block">Terms &amp; Conditions</a></li>
-              <li><a href="#" className="py-2 d-block">Privacy Policy</a></li>
+  return (
+    <footer className="bg-dark" id="tempaltemo_footer">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4 pt-5">
+            <h2 className="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+            <ul className="list-unstyled text-light footer-link-list">
+              <li>
+                <i className="fas fa-map-marker-alt fa-fw" />
+                123 Consectetur at ligula 10660
+              </li>
+              <li>
+                <i className="fa fa-phone fa-fw" />
+                <a className="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+              </li>
+              <li>
+                <i className="fa fa-envelope fa-fw" />
+                <a className="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+              </li>
             </ul>
-            <ul className="list-unstyled">
-              <li><a href="#" className="py-2 d-block">FAQs</a></li>
-              <li><a href="#" className="py-2 d-block">Contact</a></li>
+          </div>
+          <div className="col-md-4 pt-5">
+            <h2 className="h2 text-light border-bottom pb-3 border-light">Products</h2>
+            <ul className="list-unstyled text-light footer-link-list">
+              <li><a className="text-decoration-none" href="#">Luxury</a></li>
+              <li><a className="text-decoration-none" href="#">Sport Wear</a></li>
+              <li><a className="text-decoration-none" href="#">Men's Shoes</a></li>
+              <li><a className="text-decoration-none" href="#">Women's Shoes</a></li>
+              <li><a className="text-decoration-none" href="#">Popular Dress</a></li>
+              <li><a className="text-decoration-none" href="#">Gym Accessories</a></li>
+              <li><a className="text-decoration-none" href="#">Sport Shoes</a></li>
+            </ul>
+          </div>
+          <div className="col-md-4 pt-5">
+            <h2 className="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+            <ul className="list-unstyled text-light footer-link-list">
+              <li><a className="text-decoration-none" href="#">Home</a></li>
+              <li><a className="text-decoration-none" href="#">About Us</a></li>
+              <li><a className="text-decoration-none" href="#">Shop Locations</a></li>
+              <li><a className="text-decoration-none" href="#">FAQs</a></li>
+              <li><a className="text-decoration-none" href="#">Contact</a></li>
             </ul>
           </div>
         </div>
-      </div>
-      <div className="col-md">
-        <div className="ftco-footer-widget mb-4">
-          <h2 className="ftco-heading-2">Have a Questions?</h2>
-          <div className="block-23 mb-3">
-            <ul>
-              <li><span className="icon icon-map-marker" /><span className="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-              <li><a href="#"><span className="icon icon-phone" /><span className="text">+2 392 3929 210</span></a></li>
-              <li><a href="#"><span className="icon icon-envelope" /><span className="text">info@yourdomain.com</span></a></li>
+        <div className="row text-light mb-4">
+          <div className="col-12 mb-3">
+            <div className="w-100 my-3 border-top border-light" />
+          </div>
+          <div className="col-auto me-auto">
+            <ul className="list-inline text-left footer-icons">
+              <li className="list-inline-item border border-light rounded-circle text-center">
+                <a className="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i className="fab fa-facebook-f fa-lg fa-fw" /></a>
+              </li>
+              <li className="list-inline-item border border-light rounded-circle text-center">
+                <a className="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i className="fab fa-instagram fa-lg fa-fw" /></a>
+              </li>
+              <li className="list-inline-item border border-light rounded-circle text-center">
+                <a className="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i className="fab fa-twitter fa-lg fa-fw" /></a>
+              </li>
+              <li className="list-inline-item border border-light rounded-circle text-center">
+                <a className="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i className="fab fa-linkedin fa-lg fa-fw" /></a>
+              </li>
             </ul>
+          </div>
+          <div className="col-auto">
+            <label className="sr-only" htmlFor="subscribeEmail">Email address</label>
+            <div className="input-group mb-2">
+              <input type="text" className="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address" />
+              <div className="input-group-text btn-success text-light">Subscribe</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div className="row">
-      <div className="col-md-12 text-center">
-        <p>
-          Copyright © All rights reserved | This template is made with <i className="icon-heart color-danger" aria-hidden="true" /> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-        </p>
+      <div className="w-100 bg-black py-3">
+        <div className="container">
+          <div className="row pt-2">
+            <div className="col-12">
+              <p className="text-left text-light">
+                Copyright © 2021 Company Name
+                | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
-    );
+
+  );
 }
 
 export default Footer;

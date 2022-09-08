@@ -4,53 +4,56 @@ import { NavLink } from 'react-router-dom';
 function Header(props) {
   return (
     <>
-      <div className="py-1 bg-black">
-        <div className="container">
-          <div className="row no-gutters d-flex align-items-start align-items-center px-md-0">
-            <div className="col-lg-12 d-block">
-              <div className="row d-flex">
-                <div className="col-md pr-4 d-flex topper align-items-center">
-                  <div className="icon mr-2 d-flex justify-content-center align-items-center"><span className="icon-phone2" /></div>
-                  <span className="text">+ 1235 2355 98</span>
-                </div>
-                <div className="col-md pr-4 d-flex topper align-items-center">
-                  <div className="icon mr-2 d-flex justify-content-center align-items-center"><span className="icon-paper-plane" /></div>
-                  <span className="text">youremail@email.com</span>
-                </div>
-                <div className="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-                  <span className="text">3-5 Business days delivery &amp; Free Returns</span>
+      <nav className="navbar navbar-expand-lg navbar-light shadow">
+        <div className="container d-flex justify-content-between align-items-center">
+          <a className="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            Zay
+          </a>
+          <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div className="flex-fill">
+              <ul className="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                <li className="nav-item">
+                  {/* <a className="nav-link" href="index.html">Home</a> */}
+                  <NavLink exact className="nav-link" to={"/"}>Home</NavLink>
+                </li>
+                <li className="nav-item">
+                  {/* <a className="nav-link" href="about.html">About</a> */}
+                  <NavLink exact className="nav-link" to={"/about"}>About</NavLink>
+                </li>
+                <li className="nav-item">
+                  {/* <a className="nav-link" href="shop.html">Shop</a> */}
+                  <NavLink className="nav-link" to={"/shop"}>Shop</NavLink>
+                </li>
+                <li className="nav-item">
+                  {/* <a className="nav-link" href="contact.html">Contact</a> */}
+                  <NavLink className="nav-link" to={"/contact"}>Contact</NavLink>
+                </li>
+              </ul>
+            </div>
+            <div className="navbar align-self-center d-flex">
+              <div className="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                <div className="input-group">
+                  <input type="text" className="form-control" id="inputMobileSearch" placeholder="Search ..." />
+                  <div className="input-group-text">
+                    <i className="fa fa-fw fa-search" />
+                  </div>
                 </div>
               </div>
+              <a className="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                <i className="fa fa-fw fa-search text-dark mr-2" />
+              </a>
+              <a className="nav-icon position-relative text-decoration-none" href="#">
+                <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1" />
+                <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+              </a>
+              <a className="nav-icon position-relative text-decoration-none" href="#">
+                <i className="fa fa-fw fa-user text-dark mr-3" />
+                <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+              </a>
             </div>
-          </div>
-        </div>
-      </div>
-      <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div className="container">
-          <a className="navbar-brand" href="index.html">Minishop</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="oi oi-menu" /> Menu
-          </button>
-          <div className="collapse navbar-collapse" id="ftco-nav">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                {/* <a href="index.html" className="nav-link">Home</a> */}
-                <NavLink exact to={"/"} className="nav-link">Home</NavLink>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
-                <div className="dropdown-menu" aria-labelledby="dropdown04">
-                  <a className="dropdown-item" href="shop.html">Shop</a>
-                  <a className="dropdown-item" href="product-single.html">Single Product</a>
-                  <a className="dropdown-item" href="cart.html">Cart</a>
-                  <a className="dropdown-item" href="checkout.html">Checkout</a>
-                </div>
-              </li>
-              <li className="nav-item"><a href="about.html" className="nav-link">About</a></li>
-              <li className="nav-item"><a href="blog.html" className="nav-link">Blog</a></li>
-              <li className="nav-item"><a href="contact.html" className="nav-link">Contact</a></li>
-              <li className="nav-item cta cta-colored"><a href="cart.html" className="nav-link"><span className="icon-shopping_cart" />[0]</a></li>
-            </ul>
           </div>
         </div>
       </nav>

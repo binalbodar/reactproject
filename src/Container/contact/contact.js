@@ -1,128 +1,66 @@
 import React from 'react';
 
 function contact(props) {
-    return (
-        <div>
-  <div className="hero-wrap hero-bread" style={{backgroundImage: 'url("images/bg_6.jpg")'}}>
-    <div className="container">
-      <div className="row no-gutters slider-text align-items-center justify-content-center">
-        <div className="col-md-9 ftco-animate text-center">
-          <p className="breadcrumbs"><span className="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
-          <h1 className="mb-0 bread">Contact Us</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section className="ftco-section contact-section bg-light">
-    <div className="container">
-      <div className="row d-flex mb-5 contact-info">
-        <div className="w-100" />
-        <div className="col-md-3 d-flex">
-          <div className="info bg-white p-4">
-            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+  return (
+    <div>
+      <div className="modal fade bg-white" id="templatemo_search" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="modal-dialog modal-lg" role="document">
+          <div className="w-100 pt-1 mb-5 text-right">
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
           </div>
-        </div>
-        <div className="col-md-3 d-flex">
-          <div className="info bg-white p-4">
-            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-          </div>
-        </div>
-        <div className="col-md-3 d-flex">
-          <div className="info bg-white p-4">
-            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-          </div>
-        </div>
-        <div className="col-md-3 d-flex">
-          <div className="info bg-white p-4">
-            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-          </div>
-        </div>
-      </div>
-      <div className="row block-9">
-        <div className="col-md-6 order-md-last d-flex">
-          <form action="#" className="bg-white p-5 contact-form">
-            <div className="form-group">
-              <input type="text" className="form-control" placeholder="Your Name" />
-            </div>
-            <div className="form-group">
-              <input type="text" className="form-control" placeholder="Your Email" />
-            </div>
-            <div className="form-group">
-              <input type="text" className="form-control" placeholder="Subject" />
-            </div>
-            <div className="form-group">
-              <textarea name id cols={30} rows={7} className="form-control" placeholder="Message" defaultValue={""} />
-            </div>
-            <div className="form-group">
-              <input type="submit" defaultValue="Send Message" className="btn btn-primary py-3 px-5" />
+          <form action method="get" className="modal-content modal-body border-0 p-0">
+            <div className="input-group mb-2">
+              <input type="text" className="form-control" id="inputModalSearch" name="q" placeholder="Search ..." />
+              <button type="submit" className="input-group-text bg-success text-light">
+                <i className="fa fa-fw fa-search text-white" />
+              </button>
             </div>
           </form>
         </div>
-        <div className="col-md-6 d-flex">
-          <div id="map" className="bg-white" />
+      </div>
+      <div className="container-fluid bg-light py-5">
+        <div className="col-md-6 m-auto text-center">
+          <h1 className="h1">Contact Us</h1>
+          <p>
+            Proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+      </div>
+      <div id="mapid" style={{ width: '100%', height: 300 }} />
+      <div className="container py-5">
+        <div className="row py-5">
+          <form className="col-md-9 m-auto" method="post" role="form">
+            <div className="row">
+              <div className="form-group col-md-6 mb-3">
+                <label htmlFor="inputname">Name</label>
+                <input type="text" className="form-control mt-1" id="name" name="name" placeholder="Name" />
+              </div>
+              <div className="form-group col-md-6 mb-3">
+                <label htmlFor="inputemail">Email</label>
+                <input type="email" className="form-control mt-1" id="email" name="email" placeholder="Email" />
+              </div>
+            </div>
+            <div className="mb-3">
+              <label htmlFor="inputsubject">Subject</label>
+              <input type="text" className="form-control mt-1" id="subject" name="subject" placeholder="Subject" />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="inputmessage">Message</label>
+              <textarea className="form-control mt-1" id="message" name="message" placeholder="Message" rows={8} defaultValue={""} />
+            </div>
+            <div className="row">
+              <div className="col text-end mt-2">
+                <button type="submit" className="btn btn-success btn-lg px-3">Let’s Talk</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-  </section> 
-  <section className="ftco-gallery ftco-section ftco-no-pb">
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-md-8 heading-section text-center mb-4 ftco-animate">
-          <h2 className="mb-4">Follow Us On Instagram</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-        </div>
-      </div>
-    </div>
-    <div className="container-fluid px-0">
-      <div className="row no-gutters">
-        <div className="col-md-4 col-lg-2 ftco-animate">
-          <a href="images/gallery-1.jpg" className="gallery image-popup img d-flex align-items-center" style={{backgroundImage: 'url(images/gallery-1.jpg)'}}>
-            <div className="icon mb-4 d-flex align-items-center justify-content-center">
-              <span className="icon-instagram" />
-            </div>
-          </a>
-        </div>
-        <div className="col-md-4 col-lg-2 ftco-animate">
-          <a href="images/gallery-2.jpg" className="gallery image-popup img d-flex align-items-center" style={{backgroundImage: 'url(images/gallery-2.jpg)'}}>
-            <div className="icon mb-4 d-flex align-items-center justify-content-center">
-              <span className="icon-instagram" />
-            </div>
-          </a>
-        </div>
-        <div className="col-md-4 col-lg-2 ftco-animate">
-          <a href="images/gallery-3.jpg" className="gallery image-popup img d-flex align-items-center" style={{backgroundImage: 'url(images/gallery-3.jpg)'}}>
-            <div className="icon mb-4 d-flex align-items-center justify-content-center">
-              <span className="icon-instagram" />
-            </div>
-          </a>
-        </div>
-        <div className="col-md-4 col-lg-2 ftco-animate">
-          <a href="images/gallery-4.jpg" className="gallery image-popup img d-flex align-items-center" style={{backgroundImage: 'url(images/gallery-4.jpg)'}}>
-            <div className="icon mb-4 d-flex align-items-center justify-content-center">
-              <span className="icon-instagram" />
-            </div>
-          </a>
-        </div>
-        <div className="col-md-4 col-lg-2 ftco-animate">
-          <a href="images/gallery-5.jpg" className="gallery image-popup img d-flex align-items-center" style={{backgroundImage: 'url(images/gallery-5.jpg)'}}>
-            <div className="icon mb-4 d-flex align-items-center justify-content-center">
-              <span className="icon-instagram" />
-            </div>
-          </a>
-        </div>
-        <div className="col-md-4 col-lg-2 ftco-animate">
-          <a href="images/gallery-6.jpg" className="gallery image-popup img d-flex align-items-center" style={{backgroundImage: 'url(images/gallery-6.jpg)'}}>
-            <div className="icon mb-4 d-flex align-items-center justify-content-center">
-              <span className="icon-instagram" />
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
 
-    );
+
+  );
 }
 
 export default contact;
