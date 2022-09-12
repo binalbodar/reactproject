@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function shop(props) {
     return (
@@ -89,14 +90,14 @@ function shop(props) {
                                             <img className="card-img rounded-0 img-fluid" src="img/shop_01.jpg" />
                                             <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                                 <ul className="list-unstyled">
-                                                    <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus" /></a></li>
+                                                    <li><NavLink className="btn btn-success text-white" to={"/shope-singal"}><i className="far fa-heart" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="far fa-eye" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="fas fa-cart-plus" /></NavLink></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                                            <NavLink to={"/shope-singal"} className="h3 text-decoration-none">Oupidatat non</NavLink>
                                             <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                                                 <li>M/L/X/XL</li>
                                                 <li className="pt-2">
@@ -126,14 +127,14 @@ function shop(props) {
                                             <img className="card-img rounded-0 img-fluid" src="img/shop_02.jpg" />
                                             <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                                 <ul className="list-unstyled">
-                                                    <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus" /></a></li>
+                                                    <li><NavLink className="btn btn-success text-white" to={"/shope-singal"}><i className="far fa-heart" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="far fa-eye" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="fas fa-cart-plus" /></NavLink></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                                            <NavLink to={"/shope-singal"} className="h3 text-decoration-none">Oupidatat non</NavLink>
                                             <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                                                 <li>M/L/X/XL</li>
                                                 <li className="pt-2">
@@ -163,14 +164,14 @@ function shop(props) {
                                             <img className="card-img rounded-0 img-fluid" src="img/shop_03.jpg" />
                                             <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                                 <ul className="list-unstyled">
-                                                    <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus" /></a></li>
+                                                    <li><NavLink className="btn btn-success text-white" to={"/shope-singal"}><i className="far fa-heart" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="far fa-eye" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="fas fa-cart-plus" /></NavLink></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                                            <NavLink to={"/shope-singal"} className="h3 text-decoration-none">Oupidatat non</NavLink>
                                             <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                                                 <li>M/L/X/XL</li>
                                                 <li className="pt-2">
@@ -200,14 +201,14 @@ function shop(props) {
                                             <img className="card-img rounded-0 img-fluid" src="img/shop_04.jpg" />
                                             <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                                 <ul className="list-unstyled">
-                                                    <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus" /></a></li>
+                                                    <li><NavLink className="btn btn-success text-white" to={"/shope-singal"}><i className="far fa-heart" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="far fa-eye" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="fas fa-cart-plus" /></NavLink></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                                            <NavLink to={"/shope-singal"} className="h3 text-decoration-none">Oupidatat non</NavLink>
                                             <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                                                 <li>M/L/X/XL</li>
                                                 <li className="pt-2">
@@ -237,14 +238,14 @@ function shop(props) {
                                             <img className="card-img rounded-0 img-fluid" src="img/shop_05.jpg" />
                                             <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                                 <ul className="list-unstyled">
-                                                    <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus" /></a></li>
+                                                    <li><NavLink className="btn btn-success text-white" to={"/shope-singal"}><i className="far fa-heart" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="far fa-eye" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="fas fa-cart-plus" /></NavLink></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                                            <NavLink to={"/shope-singal"} className="h3 text-decoration-none">Oupidatat non</NavLink>
                                             <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                                                 <li>M/L/X/XL</li>
                                                 <li className="pt-2">
@@ -274,14 +275,14 @@ function shop(props) {
                                             <img className="card-img rounded-0 img-fluid" src="img/shop_06.jpg" />
                                             <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                                 <ul className="list-unstyled">
-                                                    <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus" /></a></li>
+                                                    <li><NavLink className="btn btn-success text-white" to={"/shope-singal"}><i className="far fa-heart" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="far fa-eye" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="fas fa-cart-plus" /></NavLink></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                                            <NavLink to={"/shope-singal"} className="h3 text-decoration-none">Oupidatat non</NavLink>
                                             <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                                                 <li>M/L/X/XL</li>
                                                 <li className="pt-2">
@@ -311,14 +312,14 @@ function shop(props) {
                                             <img className="card-img rounded-0 img-fluid" src="img/shop_07.jpg" />
                                             <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                                 <ul className="list-unstyled">
-                                                    <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus" /></a></li>
+                                                    <li><NavLink className="btn btn-success text-white" to={"/shope-singal"}><i className="far fa-heart" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="far fa-eye" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="fas fa-cart-plus" /></NavLink></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                                            <NavLink to={"/shope-singal"} className="h3 text-decoration-none">Oupidatat non</NavLink>
                                             <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                                                 <li>M/L/X/XL</li>
                                                 <li className="pt-2">
@@ -348,14 +349,14 @@ function shop(props) {
                                             <img className="card-img rounded-0 img-fluid" src="img/shop_08.jpg" />
                                             <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                                 <ul className="list-unstyled">
-                                                    <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus" /></a></li>
+                                                    <li><NavLink className="btn btn-success text-white" to={"/shope-singal"}><i className="far fa-heart" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="far fa-eye" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="fas fa-cart-plus" /></NavLink></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                                            <NavLink to={"/shope-singal"} className="h3 text-decoration-none">Oupidatat non</NavLink>
                                             <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                                                 <li>M/L/X/XL</li>
                                                 <li className="pt-2">
@@ -385,14 +386,14 @@ function shop(props) {
                                             <img className="card-img rounded-0 img-fluid" src="img/shop_09.jpg" />
                                             <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                                 <ul className="list-unstyled">
-                                                    <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="far fa-eye" /></a></li>
-                                                    <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus" /></a></li>
+                                                    <li><NavLink className="btn btn-success text-white" to={"/shope-singal"}><i className="far fa-heart" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="far fa-eye" /></NavLink></li>
+                                                    <li><NavLink className="btn btn-success text-white mt-2" to={"/shope-singal"}><i className="fas fa-cart-plus" /></NavLink></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div className="card-body">
-                                            <a href="shop-single.html" className="h3 text-decoration-none">Oupidatat non</a>
+                                            <NavLink to={"/shope-singal"} className="h3 text-decoration-none">Oupidatat non</NavLink>
                                             <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
                                                 <li>M/L/X/XL</li>
                                                 <li className="pt-2">
