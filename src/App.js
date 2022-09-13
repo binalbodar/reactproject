@@ -7,6 +7,7 @@ import About from './Container/About/About';
 import shop from './Container/shop/shop';
 import contact from './Container/contact/contact';
 import shope_singal from './Container/shop-singal/shope_singal';
+import Categaryadmin from './admin/Container/Categaryadmin';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path={"/shop"} component={shop}/>
         <Route exact path={"/contact"} component={contact}/>
         <Route exact path={"/shope-singal"} component={shope_singal}/>
+        <Route exact path={"/categoryadmin"} component={Categaryadmin}/>
       </Switch>
     <Footer/> 
     </>
