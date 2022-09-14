@@ -90,7 +90,7 @@ export default function Layout({children}) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      {/* <AppBar position="fixed" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -105,7 +105,7 @@ export default function Layout({children}) {
             Persistent drawer
           </Typography>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
       <Drawer
         sx={{
           width: drawerWidth,

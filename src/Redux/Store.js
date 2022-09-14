@@ -2,7 +2,7 @@ import { applyMiddleware, createStore } from 'redux'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import thunk from 'redux-thunk';
-import { rootReducer } from './Reducer'
+import { rootReducer } from './Reduser';
 
 const persistConfig = {
     key: 'root',

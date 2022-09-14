@@ -58,19 +58,6 @@ function Categaryadmin(props) {
     }
     const handleUpdate = (values) => {
         dispatch(upadateCategory(values));
-        // console.log(values, uid);
-        // let localData=JSON.parse(localStorage.getItem('medicine'));
-        // let vData=localData.map((l)=>{
-        //     if(l.id===uid){
-        //         return{id: uid, ...values};
-        //     }
-        //     else
-        //     {
-        //         return l;
-        //     }
-        // })
-        // console.log(vData);
-        // localStorage.setItem("medicine", JSON.stringify(vData));
         setOpen(false);
         setUpdate(false);
         setUid();
@@ -79,9 +66,6 @@ function Categaryadmin(props) {
     const handleDelete = () => {
         console.log(did);
         dispatch(deleteCategory(did))
-        // let localData1 = JSON.parse(localStorage.getItem("medicine"));
-        // let appData = localData1.filter((l, i) => l.id !== did);
-        // localStorage.setItem("medicine", JSON.stringify(appData));
         getData();
         setDid('');
         handleClose('');
@@ -95,22 +79,8 @@ function Categaryadmin(props) {
         [])
 
     let handleSubmit = (values) => {
-        // console.log(name);
-
-
+        console.log(values);
         dispatch(addCategory(values))
-
-        // let localData = JSON.parse(localStorage.getItem('medicine'));
-
-        // if (localData === null) {
-        //     localStorage.setItem('medicine', JSON.stringify([data]));
-        // }
-        // else {
-        //     localData.push(data);
-        //     localStorage.setItem('medicine', JSON.stringify(localData));
-        // }
-
-
         handleClose();
         setName('');
         getData();
@@ -125,7 +95,7 @@ function Categaryadmin(props) {
     const formik = useFormik({
         initialValues: {
             name: '',
-            flie: ''
+            file: ''
         },
         validationSchema: schema,
         onSubmit: values => {
@@ -142,7 +112,8 @@ function Categaryadmin(props) {
     console.log(formik.errors);
 
     const columns = [
-        { field: 'id', headerName: 'ID', width: 70 },
+        { field: 'id', headerName: 'ID', width: 130 },
+        {field: 'name', headerName: 'Name', width: 130},
         {
             field: 'url', headerName: 'FileName', width: 130,
             renderCell: (params) => (
@@ -194,7 +165,7 @@ function Categaryadmin(props) {
                                 margin="dense"
                                 name="name"
                                 value={formik.values.name}
-                                label="Doctor Name"
+                                label="Category Name"
                                 fullWidth
                                 variant="standard"
                                 onChange={formik.handleChange}
