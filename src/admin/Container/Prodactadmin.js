@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -13,9 +13,11 @@ import * as yup from 'yup';
 import { Form, Formik, useFormik } from 'formik';
 import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch, useSelector } from 'react-redux';
-import { addCategory, deleteCategory, getCategory, upadateCategory } from '../../Redux/Action/Categary.action';
+import { addProduct, deleteProduct, getProduct, upadateProduct } from '../../Redux/Action/Product.action';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
-function Categaryadmin(props) {
+function Prodactadmin(props) {
     const [open, setOpen] = useState(false);
     const [dopen, setDOpen] = useState(false);
     const [name, setName] = useState('');
@@ -23,7 +25,7 @@ function Categaryadmin(props) {
     const [did, setDid] = useState();
     const [update, setUpdate] = useState(false);
     const [uid, setUid] = useState();
-    const Category = useSelector(state => state.Category)
+    const Product = useSelector(state => state.Product)
     const dispatch = useDispatch()
 
     const handleClickOpen = () => {
@@ -44,37 +46,41 @@ function Categaryadmin(props) {
         formik.setValues({
             id: params.id,
             name: params.name,
+            price: params.price,
+            discription: params.discription,
             file: params.url,
             ...params
         });
         setUpdate(true);
     }
     const handleUpdate = (values) => {
-        dispatch(upadateCategory(values));
+        dispatch(upadateProduct(values));
         setOpen(false);
         setUpdate(false);
         setUid();
     }
     const handleDelete = () => {
-        dispatch(deleteCategory(did))
+        dispatch(deleteProduct(did))
         setDid('');
         handleClose('');
 
     }
-    useEffect(
+    useEffect (
         () => {
-            dispatch(getCategory())
+            dispatch(getProduct())
         },
         [])
 
     let handleSubmit = (values) => {
-        dispatch(addCategory(values))
+        dispatch(addProduct(values))
         handleClose();
         setName('');
     }
 
     let schema = yup.object().shape({
         name: yup.string().required('Please Enter Your Name'),
+        price: yup.string().required('Please Enter Price'),
+        discription: yup.string().required('Please Enter Discription'),
         file: yup.mixed().required('Please Select File')
     });
 
@@ -97,6 +103,8 @@ function Categaryadmin(props) {
     const columns = [
         { field: 'id', headerName: 'ID', width: 130 },
         {field: 'name', headerName: 'Name', width: 130},
+        {field: 'price', headerName: 'Price', width: 130},
+        {field: 'discription', headerName: 'Discription', width: 130},
         {
             field: 'url', headerName: 'FileName', width: 130,
             renderCell: (params) => (
@@ -126,11 +134,11 @@ function Categaryadmin(props) {
     return (
         <div>
             <Button variant="outlined" onClick={handleClickOpen}>
-                Add Category Data
+                Add Product Data
             </Button>
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
-                    rows={Category.Category}
+                    rows={Product.Product}
                     columns={columns}
                     pageSize={5}
                     rowsPerPageOptions={[5]}
@@ -139,7 +147,7 @@ function Categaryadmin(props) {
             </div>
 
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>Category Data</DialogTitle>
+                <DialogTitle>Product Data</DialogTitle>
                 <Formik values={formik}>
                     <Form onSubmit={formik.handleSubmit}>
                         <DialogContent>
@@ -148,12 +156,36 @@ function Categaryadmin(props) {
                                 margin="dense"
                                 name="name"
                                 value={formik.values.name}
-                                label="Category Name"
+                                label="Product Name"
                                 fullWidth
                                 variant="standard"
                                 onChange={formik.handleChange}
                             />
                             {formik.errors.name ? <p>{formik.errors.name}</p> : null}
+
+                            <TextField
+                                autoFocus
+                                margin="dense"
+                                name="price"
+                                value={formik.values.price}
+                                label="Product Price"
+                                fullWidth
+                                variant="standard"
+                                onChange={formik.handleChange}
+                            />
+                            {formik.errors.price ? <p>{formik.errors.price}</p> : null}
+
+                            <TextField
+                                autoFocus
+                                margin="dense"
+                                name="discription"
+                                value={formik.values.discription}
+                                label="Product Discription"
+                                fullWidth
+                                variant="standard"
+                                onChange={formik.handleChange}
+                            />
+                            {formik.errors.discription ? <p>{formik.errors.discription}</p> : null}
 
                             <input
                                 type="file"
@@ -192,4 +224,4 @@ function Categaryadmin(props) {
     );
 }
 
-export default Categaryadmin;
+export default Prodactadmin;

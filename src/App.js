@@ -11,6 +11,7 @@ import Categaryadmin from './admin/Container/Categaryadmin';
 import Layout from './Componet/Layout/Layout';
 import { Provider } from 'react-redux';
 import { configurStore } from './Redux/Store';
+import Prodactadmin from './admin/Container/Prodactadmin';
 
 function App() {
   const { store } = configurStore()
@@ -18,7 +19,6 @@ function App() {
     <>
       <Provider store={store}>
         <Header />
-        <Layout>
           <Switch>
             <Route exact path={"/"} component={Home} />
             <Route exact path={"/about"} component={About} />
@@ -26,8 +26,8 @@ function App() {
             <Route exact path={"/contact"} component={contact} />
             <Route exact path={"/shope-singal"} component={shope_singal} />
             <Route exact path={"/categoryadmin"} component={Categaryadmin} />
+            <Route exact path={"/productadmin"} component={Prodactadmin}/>
           </Switch>
-        </Layout>
         <Footer />
       </Provider>
     </>
