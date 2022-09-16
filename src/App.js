@@ -12,6 +12,7 @@ import Layout from './Componet/Layout/Layout';
 import { Provider } from 'react-redux';
 import { configurStore } from './Redux/Store';
 import Prodactadmin from './admin/Container/Prodactadmin';
+import Productview from './Componet/Productview/Productview';
 
 function App() {
   const { store } = configurStore()
@@ -27,6 +28,7 @@ function App() {
             <Route exact path={"/shope-singal"} component={shope_singal} />
             <Route exact path={"/categoryadmin"} component={Categaryadmin} />
             <Route exact path={"/productadmin"} component={Prodactadmin}/>
+            <Route exact path={"/productview"} component={Productview}/>
           </Switch>
         <Footer />
       </Provider>

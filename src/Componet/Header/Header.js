@@ -39,6 +39,10 @@ function Header(props) {
                   {/* <a className="nav-link" href="contact.html">Contact</a> */}
                   <NavLink className="nav-link" to={"/productadmin"}>ProductAdmin</NavLink>
                 </li>
+                <li className="nav-item">
+                  {/* <a className="nav-link" href="contact.html">Contact</a> */}
+                  <NavLink className="nav-link" to={"/productview"}>Productview</NavLink>
+                </li>
               </ul>
             </div>
             <div className="navbar align-self-center d-flex">

@@ -36,6 +36,7 @@ export const addProduct = (data) => async (dispatch) => {
                             name: data.name,
                             price: data.price,
                             discription: data.discription,
+                            category_id: data.category_id,
                             url: url,
                             fileName: randomdoc
                         })
@@ -46,6 +47,7 @@ export const addProduct = (data) => async (dispatch) => {
                                 name: data.name,
                                 price: data.price,
                                 discription: data.discription,
+                                category_id: data.category_id,
                                 url: url,
                                 fileName: randomdoc
                             }
@@ -85,6 +87,7 @@ export const upadateProduct = (data) => async (dispatch) => {
                 name: data.name,
                 price: data.price,
                 discription: data.discription,
+                category_id: data.category_id,
                 url: data.url
             });
             dispatch({ type: ActionTypes.UPADATE_PRODUCT, payload: data })
@@ -104,6 +107,7 @@ export const upadateProduct = (data) => async (dispatch) => {
                                             name: data.name,
                                             price: data.price,
                                             discription: data.discription,
+                                            category_id: data.category_id,
                                             fileName: randomdoc,
                                             url: url
                                         });
@@ -114,6 +118,7 @@ export const upadateProduct = (data) => async (dispatch) => {
                                                 ...data,
                                                 price: data.price,
                                                 discription: data.discription,
+                                                category_id: data.category_id,
                                                 fileName: randomdoc,
                                                 url: url
                                             }

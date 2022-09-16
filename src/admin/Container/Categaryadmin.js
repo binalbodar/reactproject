@@ -14,6 +14,7 @@ import { Form, Formik, useFormik } from 'formik';
 import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCategory, deleteCategory, getCategory, upadateCategory } from '../../Redux/Action/Categary.action';
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
 function Categaryadmin(props) {
     const [open, setOpen] = useState(false);
@@ -24,7 +25,8 @@ function Categaryadmin(props) {
     const [update, setUpdate] = useState(false);
     const [uid, setUid] = useState();
     const Category = useSelector(state => state.Category)
-    const dispatch = useDispatch()
+    const dispatch = useDispatch() 
+
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -96,7 +98,7 @@ function Categaryadmin(props) {
     });
     const columns = [
         { field: 'id', headerName: 'ID', width: 130 },
-        {field: 'name', headerName: 'Name', width: 130},
+        { field: 'name', headerName: 'Name', width: 130 },
         {
             field: 'url', headerName: 'FileName', width: 130,
             renderCell: (params) => (
@@ -154,6 +156,7 @@ function Categaryadmin(props) {
                                 onChange={formik.handleChange}
                             />
                             {formik.errors.name ? <p>{formik.errors.name}</p> : null}
+ 
 
                             <input
                                 type="file"

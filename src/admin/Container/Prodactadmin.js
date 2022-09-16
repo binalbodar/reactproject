@@ -16,6 +16,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addProduct, deleteProduct, getProduct, upadateProduct } from '../../Redux/Action/Product.action';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { getCategory } from '../../Redux/Action/Categary.action';
 
 function Prodactadmin(props) {
     const [open, setOpen] = useState(false);
@@ -27,6 +29,7 @@ function Prodactadmin(props) {
     const [uid, setUid] = useState();
     const Product = useSelector(state => state.Product)
     const dispatch = useDispatch()
+    const Category = useSelector(state => state.Category)
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -65,9 +68,10 @@ function Prodactadmin(props) {
         handleClose('');
 
     }
-    useEffect (
+    useEffect(
         () => {
             dispatch(getProduct())
+            dispatch(getCategory())
         },
         [])
 
@@ -81,13 +85,17 @@ function Prodactadmin(props) {
         name: yup.string().required('Please Enter Your Name'),
         price: yup.string().required('Please Enter Price'),
         discription: yup.string().required('Please Enter Discription'),
-        file: yup.mixed().required('Please Select File')
+        file: yup.mixed().required('Please Select File'),
+        category_id: yup.string().required('Please Enter category_id')
     });
 
     const formik = useFormik({
         initialValues: {
             name: '',
-            file: ''
+            price: '',
+            discription: '',
+            file: '',
+            category_id: ''
         },
         validationSchema: schema,
         onSubmit: values => {
@@ -102,9 +110,9 @@ function Prodactadmin(props) {
     });
     const columns = [
         { field: 'id', headerName: 'ID', width: 130 },
-        {field: 'name', headerName: 'Name', width: 130},
-        {field: 'price', headerName: 'Price', width: 130},
-        {field: 'discription', headerName: 'Discription', width: 130},
+        { field: 'name', headerName: 'Name', width: 130 },
+        { field: 'price', headerName: 'Price', width: 130 },
+        { field: 'discription', headerName: 'Discription', width: 130 },
         {
             field: 'url', headerName: 'FileName', width: 130,
             renderCell: (params) => (
@@ -186,6 +194,27 @@ function Prodactadmin(props) {
                                 onChange={formik.handleChange}
                             />
                             {formik.errors.discription ? <p>{formik.errors.discription}</p> : null}
+
+                            <FormControl fullWidth>
+                                <InputLabel id="demo-simple-select-label">Product</InputLabel>
+                                <Select
+                                    name='category_id'
+                                    labelId="demo-simple-select-label"
+                                    id="demo-simple-select"
+                                    value={formik.values.product_list}
+                                    label="Product"
+                                    onChange={formik.handleChange}
+                                >
+                                    {
+                                        Category.Category.map((a) => {
+                                            return (
+                                                <MenuItem value={a.id}>{a.name}</MenuItem>
+                                            )
+                                        })
+                                    }
+                                </Select>
+                            </FormControl>
+                            {formik.errors.Product ? <p>{formik.errors.Product}</p> : null}
 
                             <input
                                 type="file"
