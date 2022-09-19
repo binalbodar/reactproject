@@ -33,11 +33,11 @@ function Header(props) {
                 </li>
                 <li className="nav-item">
                   {/* <a className="nav-link" href="contact.html">Contact</a> */}
-                  <NavLink className="nav-link" to={"/categoryadmin"}>CategaryAdmin</NavLink>
+                  <NavLink className="nav-link" to={"/categoryadmin"}>Categary</NavLink>
                 </li>
                 <li className="nav-item">
                   {/* <a className="nav-link" href="contact.html">Contact</a> */}
-                  <NavLink className="nav-link" to={"/productadmin"}>ProductAdmin</NavLink>
+                  <NavLink className="nav-link" to={"/productadmin"}>Product</NavLink>
                 </li>
                 <li className="nav-item">
                   {/* <a className="nav-link" href="contact.html">Contact</a> */}

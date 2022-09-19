@@ -14,7 +14,6 @@ import { Form, Formik, useFormik } from 'formik';
 import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCategory, deleteCategory, getCategory, upadateCategory } from '../../Redux/Action/Categary.action';
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
 function Categaryadmin(props) {
     const [open, setOpen] = useState(false);

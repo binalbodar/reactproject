@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { getCategory } from '../../Redux/Action/Categary.action';
 
 function Productview(props) {
@@ -10,9 +11,10 @@ function Productview(props) {
     useEffect(() => {
         dispatch(getCategory())
     })
+
     return (
         <>
-        <h2>Categary</h2>
+            <h2>Categary</h2>
             {
                 Category.Category.map((a) => {
                     return (
@@ -20,13 +22,19 @@ function Productview(props) {
                             <div>
                                 <img src={a.url} alt className width="100px" my="5" />
                                 <h4 className='d-flex'>{a.name}</h4>
+                                <NavLink to={{
+                                    pathname: '/Home',
+                                    state: { id: "" }
+                                }}>
+                                    Categary Page
+                                </NavLink>
                             </div>
                         </section>
                     )
                 })
             }
 
-            <hr/>
+            <hr />
 
             <h2>Product</h2>
             {
