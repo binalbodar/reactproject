@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getCategory } from '../../Redux/Action/Categary.action';
 
-function Productview(props) {
+function Categoryview(props) {
     const Category = useSelector(state => state.Category)
     const dispatch = useDispatch()
     const Product = useSelector(state => state.Product)
@@ -14,16 +14,14 @@ function Productview(props) {
 
     return (
         <>
-            <h2>Product</h2>
+            <h2>Categary</h2>
             {
-                Product.Product.map((a) => {
+                Category.Category.map((a) => {
                     return (
                         <section>
                             <div>
                                 <img src={a.url} alt className width="300px" my="5" />
                                 <h4 className='d-flex'>Name={a.name}</h4>
-                                <h4 className='d-flex'>Price={a.price}</h4>
-                                <h4 className='d-flex'>Discription={a.discription}</h4>
                             </div>
                         </section>
                     )
@@ -33,4 +31,4 @@ function Productview(props) {
     );
 }
 
-export default Productview;
+export default Categoryview;

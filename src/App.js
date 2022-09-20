@@ -8,11 +8,11 @@ import shop from './Container/shop/shop';
 import contact from './Container/contact/contact';
 import shope_singal from './Container/shop-singal/shope_singal';
 import Categaryadmin from './admin/Container/Categaryadmin';
-import Layout from './Componet/Layout/Layout';
 import { Provider } from 'react-redux';
 import { configurStore } from './Redux/Store';
 import Prodactadmin from './admin/Container/Prodactadmin';
 import Productview from './Componet/Productview/Productview';
+import Categoryview from './Componet/Categoryview/Categoryview';
 
 function App() {
   const { store } = configurStore()
@@ -29,6 +29,7 @@ function App() {
             <Route exact path={"/categoryadmin"} component={Categaryadmin} />
             <Route exact path={"/productadmin"} component={Prodactadmin}/>
             <Route exact path={"/productview"} component={Productview}/>
+            <Route exact path={"/categoryview"} component={Categoryview}/>
           </Switch>
         <Footer />
       </Provider>

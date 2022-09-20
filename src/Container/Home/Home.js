@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { getCategory } from '../../Redux/Action/Categary.action';
 
 function Home(props) {
+  const Category = useSelector(state => state.Category)
+  const dispatch = useDispatch()
+  const Product = useSelector(state => state.Product)
+
+  useEffect(() => {
+    dispatch(getCategory())
+  })
+
   return (
     <>
       <div>
@@ -105,7 +116,7 @@ function Home(props) {
             </div>
           </div>
           <div className="row">
-            <div className="col-12 col-md-4 p-5 mt-3">
+            {/* <div className="col-12 col-md-4 p-5 mt-3">
               <a href="#"><img src="img/category_img_01.jpg" className="rounded-circle img-fluid border" /></a>
               <h5 className="text-center mt-3 mb-3">Watches</h5>
               <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
@@ -119,7 +130,24 @@ function Home(props) {
               <a href="#"><img src="img/category_img_03.jpg" className="rounded-circle img-fluid border" /></a>
               <h2 className="h5 text-center mt-3 mb-3">Accessories</h2>
               <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
-            </div>
+            </div> */}
+            {
+              Category.Category.map((a) => {
+                return (
+                  <section>
+                    <div className="col-12 col-md-4 p-5">
+                      <NavLink to={{
+                        pathname: '/categoryview',
+                        state: { id: a.id }
+                      }}>
+                        <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="400px" />
+                      </NavLink>
+                      <h4 className='text-center mt-3 mb-3'>{a.name}</h4>
+                    </div>
+                  </section>
+                )
+              })
+            }
           </div>
         </section>
         <section className="bg-light">
@@ -134,7 +162,7 @@ function Home(props) {
               </div>
             </div>
             <div className="row">
-              <div className="col-12 col-md-4 mb-4">
+              {/* <div className="col-12 col-md-4 mb-4">
                 <div className="card h-100">
                   <a href="shop-single.html">
                     <img src="img/feature_prod_01.jpg" className="card-img-top" alt="..." />
@@ -205,7 +233,24 @@ function Home(props) {
                     <p className="text-muted">Reviews (74)</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              {
+                Product.Product.map((a) => {
+                  return (
+                    <section>
+                      <div className="col-12 col-md-4 p-5">
+                        <NavLink to={{
+                          pathname: '/productview',
+                          state: { id: a.id }
+                        }}>
+                          <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="300px" my="5" />
+                        </NavLink>
+                        <h4 className='text-center mt-3 mb-3'>{a.name}</h4>
+                      </div>
+                    </section>
+                  )
+                })
+              }
             </div>
           </div>
         </section>
