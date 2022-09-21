@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom';
 import { getCategory } from '../../Redux/Action/Categary.action';
 
 function Productview(props) {
-    const Category = useSelector(state => state.Category)
     const dispatch = useDispatch()
     const Product = useSelector(state => state.Product)
 
     useEffect(() => {
-        dispatch(getCategory())
-    })
+        console.log(props.location.state.id,Product);
+        
+    },[])
 
     return (
         <>

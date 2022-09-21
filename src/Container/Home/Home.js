@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getCategory } from '../../Redux/Action/Categary.action';
+import { getProduct } from '../../Redux/Action/Product.action';
 
 function Home(props) {
   const Category = useSelector(state => state.Category)
@@ -10,7 +11,8 @@ function Home(props) {
 
   useEffect(() => {
     dispatch(getCategory())
-  })
+    dispatch(getProduct())
+  }, [])
 
   return (
     <>
@@ -255,7 +257,6 @@ function Home(props) {
           </div>
         </section>
       </div>
-
     </>
   );
 }
