@@ -125,7 +125,7 @@ function Home(props) {
             </div>
             <div className="col-12 col-md-4 p-5 mt-3">
               <a href="#"><img src="img/category_img_02.jpg" className="rounded-circle img-fluid border" /></a>
-              <h2 className="h5 text-center mt-3 mb-3">Shoes</h2>
+              <h2 className="h5 text-center mt-3 mb-3">Shoes</h2> 
               <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
             </div>
             <div className="col-12 col-md-4 p-5 mt-3">
@@ -245,7 +245,7 @@ function Home(props) {
                           pathname: '/productview',
                           state: { id: a.id }
                         }}>
-                          <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="300px" my="5" />
+                          <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="200px" />
                         </NavLink>
                         <h4 className='text-center mt-3 mb-3'>{a.name}</h4>
                       </div>

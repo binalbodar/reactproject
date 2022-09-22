@@ -1,24 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 function Categoryview(props) {
+    const [filter, setFilter] = useState([])
     const Category = useSelector(state => state.Category)
-    const dispatch = useDispatch()
 
     useEffect(() => {
-        function func() {
-            var filtered = [props.location.state.id, Category];
-            console.log(filtered);
-        }
-        func();
-        console.log(props.location.state.id, Category);
-    },[])
+        let category_data = Category.Category.filter((c, i) => c.id === props.location.state.id)
+        setFilter(category_data)
+        console.log(category_data);
+    }, [])
 
     return (
-        <>
+        <> 
             <h2>Categary</h2>
             {
-                Category.Category.map((a) => {
+                filter.map((a) => {
                     return (
                         <section>
                             <div>

@@ -5,15 +5,15 @@ import thunk from 'redux-thunk';
 import { rootReducer } from './Reduser';
 
 const persistConfig = {
-    key: 'root',
-    storage,
-    whitelist: ['counter']
-  }
-   
-  const persistedReducer = persistReducer(persistConfig, rootReducer)
+  key: 'root',
+  storage,
+  whitelist: ['counter', "Product"]
+}
 
-export const configurStore = () =>{
-    let store = createStore(persistedReducer, applyMiddleware(thunk))
-    let persistor = persistStore(store)
-    return { store, persistor }
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export const configurStore = () => {
+  let store = createStore(persistedReducer, applyMiddleware(thunk))
+  let persistor = persistStore(store)
+  return { store, persistor }
 }
