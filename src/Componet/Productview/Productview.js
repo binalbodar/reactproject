@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import { getCategory } from '../../Redux/Action/Categary.action';
+import { useSelector } from 'react-redux';
 
 function Productview(props) {
     const [filterData, setFilterData] = useState([])
@@ -22,7 +20,7 @@ function Productview(props) {
                     return (
                         <section>
                             <div>
-                                <img src={a.url} alt className width="150px" my="5" />
+                                <img src={a.url} alt className width="300px" my="5" />
                                 <h4 className='d-flex'>Name={a.name}</h4>
                                 <h4 className='d-flex'>Price={a.price}</h4>
                                 <h4 className='d-flex'>Discription={a.discription}</h4>

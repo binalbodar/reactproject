@@ -117,7 +117,7 @@ function Home(props) {
               </p>
             </div>
           </div>
-          <div className="row">
+          <div className="d-flex">
             {/* <div className="col-12 col-md-4 p-5 mt-3">
               <a href="#"><img src="img/category_img_01.jpg" className="rounded-circle img-fluid border" /></a>
               <h5 className="text-center mt-3 mb-3">Watches</h5>
@@ -137,12 +137,12 @@ function Home(props) {
               Category.Category.map((a) => {
                 return (
                   <section>
-                    <div className="col-12 col-md-4 p-5">
+                    <div className="d-flex row col-lg-6">
                       <NavLink to={{
                         pathname: '/categoryview',
                         state: { id: a.id }
                       }}>
-                        <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="400px" />
+                        <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="600px" />
                       </NavLink>
                       <h4 className='text-center mt-3 mb-3'>{a.name}</h4>
                     </div>
@@ -163,7 +163,7 @@ function Home(props) {
                 </p>
               </div>
             </div>
-            <div className="row">
+            <div className="d-flex">
               {/* <div className="col-12 col-md-4 mb-4">
                 <div className="card h-100">
                   <a href="shop-single.html">
@@ -240,12 +240,12 @@ function Home(props) {
                 Product.Product.map((a) => {
                   return (
                     <section>
-                      <div className="col-12 col-md-4 p-5">
+                      <div className="d-flex row col-lg-6">
                         <NavLink to={{
                           pathname: '/productview',
                           state: { id: a.id }
                         }}>
-                          <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="200px" />
+                          <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="600px" />
                         </NavLink>
                         <h4 className='text-center mt-3 mb-3'>{a.name}</h4>
                       </div>
