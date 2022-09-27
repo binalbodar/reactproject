@@ -137,12 +137,12 @@ function Home(props) {
               Category.Category.map((a) => {
                 return (
                   <section>
-                    <div className="d-flex row col-lg-6">
+                    <div className="d-flex row">
                       <NavLink to={{
                         pathname: '/categoryview',
                         state: { id: a.id }
                       }}>
-                        <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="600px" />
+                        <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="400px" height="150px"/>
                       </NavLink>
                       <h4 className='text-center mt-3 mb-3'>{a.name}</h4>
                     </div>
@@ -240,12 +240,12 @@ function Home(props) {
                 Product.Product.map((a) => {
                   return (
                     <section>
-                      <div className="d-flex row col-lg-6">
+                      <div className="d-flex row">
                         <NavLink to={{
                           pathname: '/productview',
                           state: { id: a.id }
                         }}>
-                          <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="600px" />
+                          <img src={a.url} alt="" className="d-flex rounded img-fluid border" width="400px" height="150px"/>
                         </NavLink>
                         <h4 className='text-center mt-3 mb-3'>{a.name}</h4>
                       </div>
