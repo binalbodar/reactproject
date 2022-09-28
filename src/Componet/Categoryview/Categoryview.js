@@ -18,8 +18,10 @@ function Categoryview(props) {
                     return (
                         <section>
                             <div>
-                                <img src={a.url} alt="" className="" width="200px" my="5" />
-                                <h4 className='d-flex'>Name={a.name}</h4>
+                                <img src={a.url} alt="" className="" width="200px" my="5" /> <hr/>
+                                <h4 className='d-flex'>Name={a.name}</h4> <hr/> 
+                                <h4 className='d-flex'>Price={a.price}</h4> <hr/>
+                                <h4 className='d-flex'>Discription={a.discription}</h4> <hr/>
                             </div>
                         </section>
                     )

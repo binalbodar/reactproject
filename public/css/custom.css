@@ -1,3 +1,10 @@
 /*
 Custom Css
 */
+.category-imag {
+    height: 200px !important;
+}
+
+.product-imag {
+    height: 200px !important;
+}
