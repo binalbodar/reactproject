@@ -142,7 +142,7 @@ function Home(props) {
                         pathname: '/categoryview',
                         state: { id: a.id }
                       }}>
-                        <img src={a.url} alt="" className="d-flex rounded img-fluid border category-imag" width="250px" />
+                        <img src={a.url} alt="" className="d-flex rounded img-fluid border category-imag" width="180px" />
                       </NavLink>
                       <h4 className='text-center mt-3 mb-3'>{a.name}</h4>
                     </div>

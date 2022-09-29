@@ -22,6 +22,7 @@ function Productview(props) {
                                 <h4 className='d-flex'>Price={a.price}</h4> <hr/>
                                 <h4 className='d-flex'>Discription={a.discription}</h4> <hr/>
                             </div>
+                            <button onClick="">Add To Cart</button>
                         </section>
                     )
                 })
