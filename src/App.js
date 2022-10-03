@@ -13,6 +13,7 @@ import { configurStore } from './Redux/Store';
 import Prodactadmin from './admin/Container/Prodactadmin';
 import Productview from './Componet/Productview/Productview';
 import Categoryview from './Componet/Categoryview/Categoryview';
+import Addtocart from './Componet/Addtocart/Addtocart';
 
 function App() {
   const { store } = configurStore()
@@ -30,6 +31,7 @@ function App() {
             <Route exact path={"/productadmin"} component={Prodactadmin}/>
             <Route exact path={"/productview"} component={Productview}/>
             <Route exact path={"/categoryview"} component={Categoryview}/>
+            <Route exact path={"/addtocart"} component={Addtocart}/>
           </Switch>
         <Footer />
       </Provider>
