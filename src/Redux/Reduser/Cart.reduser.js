@@ -6,8 +6,9 @@ const initialstate = {
     error: ''
 }
 
-export const cartReduser = (state = initialstate, action)=>{
-    switch(action.type){
+export const cartReduser = (state = initialstate, action) => {
+    console.log(action.type, action.payload, state);
+    switch (action.type) {
         case ActionTypes.ADD_CART:
             return {
                 ...state,
@@ -15,5 +16,7 @@ export const cartReduser = (state = initialstate, action)=>{
                 Cart: state.Cart.concat(action.payload),
                 error: ''
             }
+        default:
+            return state;
     }
 }

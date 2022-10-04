@@ -17,3 +17,4 @@ export const UPADATE_PRODUCT = "UPADATE_PRODUCT"
 //ADD TO CART
 export const ADD_CART = "ADD_CART"
 export const POST_CART = "POST_CART"
+export const GET_CART = "GET_CART"

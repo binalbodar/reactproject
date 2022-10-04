@@ -32,11 +32,11 @@ function Header(props) {
                   <NavLink className="nav-link" to={"/contact"}>Contact</NavLink>
                 </li>
                 <li className="nav-item">
-                  {/* <a className="nav-link" href="contact.html">Contact</a> */}
-                  <NavLink className="nav-link" to={"/categoryadmin"}>Categary</NavLink>
+                  {/* <a className="nav-link" href="Product.html">Categary</a> */}
+                  <NavLink className="nav-link" to={"/categoryadmin"}>Product</NavLink>
                 </li>
                 <li className="nav-item">
-                  {/* <a className="nav-link" href="contact.html">Contact</a> */}
+                  {/* <a className="nav-link" href="Product.html">Product</a> */}
                   <NavLink className="nav-link" to={"/productadmin"}>Product</NavLink>
                 </li>
               </ul>

@@ -240,7 +240,7 @@ function Home(props) {
                 Product.Product.map((a) => {
                   return (
                     <section>
-                      <div className="d-flex row text-center ">
+                      <div className="d-flex row text-center">
                         <NavLink to={{
                           pathname: '/productview',
                           state: { id: a.id }
