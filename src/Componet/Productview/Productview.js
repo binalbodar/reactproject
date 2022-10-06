@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom'
+import { addtoCart } from '../../Redux/Action/Cart.action';
 import Addtocart from '../Addtocart/Addtocart';
 
 function Productview(props) {
@@ -8,6 +9,7 @@ function Productview(props) {
     const Product = useSelector(state => state.Product)
     const history = useHistory();
     const dispatch = useDispatch()
+
     useEffect(() => {
         let product_data = Product.Product.filter((p, i) => p.id === props.location.state.id)
         setFilterData(product_data)
@@ -15,7 +17,7 @@ function Productview(props) {
 
     //ADD TO CART
     const addToCart = (a) => {
-        dispatch(Addtocart(a))
+        dispatch(addtoCart(a))
         history.push("/addtocart", a)
     }
 
