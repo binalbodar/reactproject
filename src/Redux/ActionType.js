@@ -16,5 +16,6 @@ export const UPADATE_PRODUCT = "UPADATE_PRODUCT"
 
 //ADD TO CART
 export const ADD_CART = "ADD_CART"
-export const POST_CART = "POST_CART"
-export const GET_CART = "GET_CART"
+export const DELETE_CART = "DELETE_CART"
+export const INCREMENT_COUNTER= "INCREMENT_COUNTER"
+export const DECREMENT_COUNTER = "DECREMENT_COUNTER"
