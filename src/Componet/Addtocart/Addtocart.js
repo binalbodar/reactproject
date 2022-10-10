@@ -33,23 +33,39 @@ function Addtocart(props) {
 
     return (
         <div>
-            <h2>Add To Cart</h2>
-            {
-                Filterdata.map((C) => {
-                    return (
-                        <tr className='d-flex'>
-                            <td><img src={C.url} alt="" width={200} /></td><hr />
-                            <td>Name={C.name}</td><hr />
-                            <td>Price={C.price}</td><hr />
-                            <td>Quantity={C.qunty}</td><hr />
-                            <td>Total={C.price * C.qunty}</td><hr />
-                            <td><button onClick={() => handleIncrement(C.id)}>+</button></td><hr />
-                            <td><button onClick={() => handleDecrement(C.id)}>-</button></td><hr />
-                            <td><button onClick={() => handleDelete(C.id)}>Delete</button></td><hr />
-                        </tr>
-                    )
-                })
-            }
+            <h2 className='text-center mb-5 mt-5'>Add To Cart</h2>
+
+            <table className='table table-success table-bordered border-success'>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Plus</th>
+                        <th>Minas</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                {
+                    Filterdata.map((C) => {
+                        return (
+                            <tr>
+                                <td><img src={C.url} alt="" width={100} /></td>
+                                <td>{C.name}</td>
+                                <td>{C.price}</td>
+                                <td>{C.qunty}</td>
+                                <td>{C.price * C.qunty}</td>
+                                <td><button class="rounded-3 border border-2 border-dark" onClick={() => handleIncrement(C.id)}>+</button></td>
+                                <td><button class="rounded-3 border border-2 border-dark" onClick={() => handleDecrement(C.id)}>-</button></td>
+                                <td><button class="rounded-3 border border-2 border-dark" onClick={() => handleDelete(C.id)}>Delete</button></td>
+                            </tr>
+                        )
+                    })
+                }
+            </table>
         </div>
     );
 }

@@ -10,15 +10,35 @@ export const cartReduser = (state = initialstate, action) => {
     console.log(action.type, action.payload, state);
     switch (action.type) {
         case ActionTypes.ADD_CART:
-            return {
-                ...state,
-                isLoading: false,
-                Cart: state.Cart.concat(action.payload),
-                error: ''
-            }
+            let findPro = state.Cart.find((c) => c.id === action.payload.id);
 
+            if (findPro) {
+                findPro.qunty++;
+
+                let incQunPro = state.Cart.map((c) => {
+                    if (c.id === findPro.id) {
+                        return findPro
+                    } else {
+                        return c;
+                    }
+                })
+                return {
+                    ...state,
+                    isLoading: false,
+                    Cart: incQunPro,
+                    error: ''
+                }
+            } else {
+                return {
+                    ...state,
+                    isLoading: false,
+                    Cart: state.Cart.concat(action.payload),
+                    error: ''
+
+                }
+            }
         case ActionTypes.DELETE_CART:
-            return{
+            return {
                 ...state,
                 isLoading: false,
                 Cart: state.Cart.filter((d) => d.id !== action.payload),
