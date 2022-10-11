@@ -14,6 +14,7 @@ import Prodactadmin from './admin/Container/Prodactadmin';
 import Productview from './Componet/Productview/Productview';
 import Categoryview from './Componet/Categoryview/Categoryview';
 import Addtocart from './Componet/Addtocart/Addtocart';
+import Login from './Container/Login/Login';
 
 function App() {
   const { store } = configurStore()
@@ -32,6 +33,7 @@ function App() {
             <Route exact path={"/productview"} component={Productview}/>
             <Route exact path={"/categoryview"} component={Categoryview}/>
             <Route exact path={"/addtocart"} component={Addtocart}/>
+            <Route exact path={"/login"} component={Login}/>
           </Switch>
         <Footer />
       </Provider>
