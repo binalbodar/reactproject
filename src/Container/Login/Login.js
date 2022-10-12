@@ -51,19 +51,15 @@ function Login(props) {
     const googlehandelsignup = () => {
         dispatch(googlesignupAction())
     }
-
-    // const schema = yup.object().shape(Login);
     const dispatch = useDispatch()
     const formik = useFormik({
         initialValues: initiValue,
         validationSchema: schema,
         onSubmit: (values, { resetForm }) => {
-            // alert(JSON.stringify(values, null, 2));
             sessionStorage.setItem("user", "Successfully Login")
 
             //LOGIN
             if (useType === "Login") {
-                // console.log("Successfully Login");
 
                 let data = {
                     email: values.email,
@@ -82,7 +78,6 @@ function Login(props) {
                 dispatch(signupAction(data));
 
             } else if (useType === "forgetPassowrd") {
-                // console.log("Successfully Forget Passowrd");
 
                 let data = {
                     email: values.email
@@ -104,8 +99,8 @@ function Login(props) {
                         {
                             useType === 'forgetPassowrd' ? <h3 className='text-center'>Forgot Password</h3> :
                                 useType === "Login" ?
-                                    <h3 className='text-center'>Login</h3> :
-                                    <h3 className='text-center'>Sign Up</h3>
+                                    <h3 className='text-center mb-5 mt-5'>Login</h3> :
+                                    <h3 className='text-center mb-5 mt-5'>Sign Up</h3>
                         }
                         <Formik value={formik}>
                             <Form onSubmit={formik.handleSubmit}>
@@ -204,7 +199,7 @@ function Login(props) {
                                                 onClick={() => setUseType("Login")}>Login</Button>
                                         </div>
                                 }
-                                <button type='button' className='btn btn-primary text-center' onClick={() => googlehandelsignup()}>SignIn With Google</button>
+                                <button type='button' onClick={() => googlehandelsignup()} className='btn btn-secondary text-center'>SignIn With Google</button>
                             </Form>
                         </Formik>
                     </div>
