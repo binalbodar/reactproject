@@ -1,14 +1,14 @@
-import { internal_resolveProps } from '@mui/utils';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavItem } from 'reactstrap';
-import { IncrementCounter, DecrementCounter, DeleteCart } from '../../Redux/Action/Cart.action'
+import { useHistory } from 'react-router-dom';
+import { IncrementCounter, DecrementCounter, DeleteCart, NextaddtocartAction } from '../../Redux/Action/Cart.action'
 
 function Addtocart(props) {
     const Filterdata = [];
     const Product = useSelector(state => state.Product)
     const Cart = useSelector(state => state.Cart)
     const dispatch = useDispatch()
+    const history = useHistory();
 
     const handleIncrement = (id) => {
         dispatch(IncrementCounter(id))
@@ -20,6 +20,11 @@ function Addtocart(props) {
 
     const handleDelete = (id) => {
         dispatch(DeleteCart(id))
+    }
+
+    const handleNext = (a) => {
+        dispatch(NextaddtocartAction(a))
+        history.push("/nextaddtocart", a)
     }
 
     Cart.Cart.map(C => Product.Product.map((P) => {
@@ -68,6 +73,7 @@ function Addtocart(props) {
                     })
                 }
             </table>
+            <button class="btn btn-success me-5" type='button' onClick={() => handleNext()}>Next</button>
         </div>
     );
 }

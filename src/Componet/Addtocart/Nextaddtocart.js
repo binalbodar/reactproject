@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { DataGrid } from '@mui/x-data-grid';
 import IconButton from '@mui/material/IconButton';
@@ -16,10 +15,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addProduct, deleteProduct, getProduct, upadateProduct } from '../../Redux/Action/Product.action';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 import { getCategory } from '../../Redux/Action/Categary.action';
+import { getNextform } from '../../Redux/Action/Nextpage.action';
 
-function Prodactadmin(props) {
+function Nextaddtocart(props) {
     const [open, setOpen] = useState(false);
     const [dopen, setDOpen] = useState(false);
     const [name, setName] = useState('');
@@ -27,9 +26,8 @@ function Prodactadmin(props) {
     const [did, setDid] = useState();
     const [update, setUpdate] = useState(false);
     const [uid, setUid] = useState();
-    const Product = useSelector(state => state.Product)
+    const Nextpage = useSelector(state => state.Nextpage)
     const dispatch = useDispatch()
-    const Category = useSelector(state => state.Category)
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -49,9 +47,8 @@ function Prodactadmin(props) {
         formik.setValues({
             id: params.id,
             name: params.name,
-            price: params.price,
-            discription: params.discription,
-            file: params.url,
+            surname: params.surname,
+            phoneno: params.phoneno,
             ...params
         });
         setUpdate(true);
@@ -72,6 +69,7 @@ function Prodactadmin(props) {
         () => {
             dispatch(getProduct())
             dispatch(getCategory())
+            dispatch(getNextform())
         },
         [])
 
@@ -83,19 +81,15 @@ function Prodactadmin(props) {
 
     let schema = yup.object().shape({
         name: yup.string().required('Please Enter Your Name'),
-        price: yup.string().required('Please Enter Price'),
-        discription: yup.string().required('Please Enter Discription'),
-        file: yup.mixed().required('Please Select File'),
-        category_id: yup.string().required('Please Enter category_id')
+        surname: yup.string().required('Please Enter Surname'),
+        phoneno: yup.string().required('Please Enter PhoneNo')
     });
 
     const formik = useFormik({
         initialValues: {
             name: '',
-            price: '',
-            discription: '',
-            file: '',
-            category_id: ''
+            surname: '',
+            phoneno: '',
         },
         validationSchema: schema,
         onSubmit: values => {
@@ -111,14 +105,8 @@ function Prodactadmin(props) {
     const columns = [
         { field: 'id', headerName: 'ID', width: 130 },
         { field: 'name', headerName: 'Name', width: 130 },
-        { field: 'price', headerName: 'Price', width: 130 },
-        { field: 'discription', headerName: 'Discription', width: 130 },
-        {
-            field: 'url', headerName: 'Image', width: 130,
-            renderCell: (params) => (
-                <img src={params.row.url} width={50} height={50} />
-            )
-        },
+        { field: 'surname', headerName: 'Surname', width: 130 },
+        { field: 'phoneno', headerName: 'PhoneNo', width: 130 },
         {
             field: 'action',
             headerName: 'Action',
@@ -142,11 +130,11 @@ function Prodactadmin(props) {
     return (
         <div>
             <Button variant="outlined" onClick={handleClickOpen}>
-                Add Product Data
+                Add Data
             </Button>
             <div style={{ height: 400, width: '100%' }}>
                 <DataGrid
-                    rows={Product.Product}
+                    rows={Nextpage.Nextpage}
                     columns={columns}
                     pageSize={5}
                     rowsPerPageOptions={[5]}
@@ -155,7 +143,7 @@ function Prodactadmin(props) {
             </div>
 
             <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>Product Data</DialogTitle>
+                <DialogTitle>Data</DialogTitle>
                 <Formik values={formik}>
                     <Form onSubmit={formik.handleSubmit}>
                         <DialogContent>
@@ -164,7 +152,7 @@ function Prodactadmin(props) {
                                 margin="dense"
                                 name="name"
                                 value={formik.values.name}
-                                label="Product Name"
+                                label="Name"
                                 fullWidth
                                 variant="standard"
                                 onChange={formik.handleChange}
@@ -174,55 +162,26 @@ function Prodactadmin(props) {
                             <TextField
                                 autoFocus
                                 margin="dense"
-                                name="price"
-                                value={formik.values.price}
-                                label="Product Price"
+                                name="surname"
+                                value={formik.values.surname}
+                                label="Surnem"
                                 fullWidth
                                 variant="standard"
                                 onChange={formik.handleChange}
                             />
-                            {formik.errors.price ? <p>{formik.errors.price}</p> : null}
+                            {formik.errors.surname ? <p>{formik.errors.surname}</p> : null}
 
                             <TextField
                                 autoFocus
                                 margin="dense"
-                                name="discription"
-                                value={formik.values.discription}
-                                label="Product Discription"
+                                name="phoneno"
+                                value={formik.values.phoneno}
+                                label="PhoneNo"
                                 fullWidth
                                 variant="standard"
                                 onChange={formik.handleChange}
                             />
-                            {formik.errors.discription ? <p>{formik.errors.discription}</p> : null}
-
-                            <FormControl fullWidth>
-                                <InputLabel id="demo-simple-select-label">Product</InputLabel>
-                                <Select
-                                    name='category_id'
-                                    labelId="demo-simple-select-label"
-                                    id="demo-simple-select"
-                                    value={formik.values.product_list}
-                                    label="Product"
-                                    onChange={formik.handleChange}
-                                >
-                                    {
-                                        Category.Category.map((a) => {
-                                            return (
-                                                <MenuItem value={a.id}>{a.name}</MenuItem>
-                                            )
-                                        })
-                                    }
-                                </Select>
-                            </FormControl>
-                            {formik.errors.Product ? <p>{formik.errors.Product}</p> : null}
-
-                            <input
-                                type="file"
-                                name='file'
-                                id='file'
-                                onChange={(event) => formik.setFieldValue("file", event.target.files[0])}
-                            />
-                            {formik.errors.file ? <p>{formik.errors.file}</p> : null}
+                            {formik.errors.phoneno ? <p>{formik.errors.phoneno}</p> : null}
 
                             <DialogActions>
                                 <Button onClick={handleClose}>Cancel</Button>
@@ -253,4 +212,4 @@ function Prodactadmin(props) {
     );
 }
 
-export default Prodactadmin;
+export default Nextaddtocart;

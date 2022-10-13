@@ -8,7 +8,7 @@ export const addtoCart = (d) => (dispatch) => {
 
 export const DeleteCart = (id) => (dispatch) => {
     dispatch({
-        type: ActionTypes.DELETE_CART, payload:id
+        type: ActionTypes.DELETE_CART, payload: id
     })
 }
 
@@ -21,5 +21,11 @@ export const IncrementCounter = (id) => (dispatch) => {
 export const DecrementCounter = (id) => (dispatch) => {
     dispatch({
         type: ActionTypes.DECREMENT_COUNTER, payload: id
+    })
+}
+
+export const NextaddtocartAction = () => (dispatch) => {
+    dispatch({
+        type: ActionTypes.NEXT_ADDTOCART
     })
 }

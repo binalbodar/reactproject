@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom'
 import { addtoCart } from '../../Redux/Action/Cart.action';
-import Addtocart from '../Addtocart/Addtocart';
 
 function Productview(props) {
     const [filterData, setFilterData] = useState([])

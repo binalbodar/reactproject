@@ -14,6 +14,7 @@ import Login from '../Container/Login/Login';
 import PublicRoute from "../Route/PublicRoute";
 import PrivateRoute from "../Route/PrivateRoute";
 import ClinetRoute from '../Route/ClinetRoute';
+import Nextaddtocart from '../Componet/Addtocart/Nextaddtocart';
 
 function AppRoute(props) {
     return (
@@ -30,6 +31,7 @@ function AppRoute(props) {
                 <PublicRoute exact path={"/categoryview"} component={Categoryview} />
                 <PrivateRoute exact path={"/addtocart"} component={Addtocart} />
                 <PublicRoute exact path={"/login"} restricted={true} component={Login} />
+                <PrivateRoute exact path={"/nextaddtocart"} component={Nextaddtocart} />
             </Switch>
         </div>
     );
