@@ -1,5 +1,5 @@
 import * as ActionTypes from "../ActionType"
-import { collection, addDoc, doc, deleteDoc, updateDoc, getDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc, doc, deleteDoc, updateDoc, getDocs } from "firebase/firestore";
 import { deleteObject, getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { db, storage } from "../../firebase";
 

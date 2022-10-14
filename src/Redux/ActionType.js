@@ -49,3 +49,16 @@ export const FORGET_PASSWORD = "FORGET_PASSWORD"
 
 //NEXT PAGE
 export const NEXT_ADDTOCART = "NEXT_ADDTOCART"
+
+//DATA 
+export const FORM_DATA = "FORM_DATA"
+export const GET_DATA = "GET_DATA"
+export const ADD_DATA = "ADD_DATA"
+export const DELETE_DATA = "DELETE_DATA"
+export const UPADATE_DATA = "UPADATE_DATA"
+export const ERROR_DATA = "ERROR_DATA"
+export const POST_DATA = "POST_DATA"
+export const LOADING_DATA = "LOADING_DATA"
+
+//SUBMIT
+export const SUBMIT_DATA = "SUBMIT_DATA"
