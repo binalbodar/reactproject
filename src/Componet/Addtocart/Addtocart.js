@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
+import { getData } from '../../Redux/Action/auth.action';
 import { IncrementCounter, DecrementCounter, DeleteCart, NextaddtocartAction } from '../../Redux/Action/Cart.action'
 
 function Addtocart(props) {
@@ -22,9 +23,9 @@ function Addtocart(props) {
         dispatch(DeleteCart(id))
     }
 
-    const handleNext = (a) => {
-        dispatch(NextaddtocartAction(a))
-        history.push("/nextaddtocart", a)
+    const handleNext = () => {
+        dispatch(NextaddtocartAction())
+        history.push("/nextaddtocart")
     }
 
     Cart.Cart.map(C => Product.Product.map((P) => {
@@ -37,6 +38,12 @@ function Addtocart(props) {
 
         }
     }))
+
+    useEffect(
+        () => {
+            dispatch(getData())
+        },
+        [])
 
     return (
         <div>
@@ -68,12 +75,18 @@ function Addtocart(props) {
                                 <td><button class="rounded-3 border border-2 border-dark" onClick={() => handleIncrement(C.id)}>+</button></td>
                                 <td><button class="rounded-3 border border-2 border-dark" onClick={() => handleDecrement(C.id)}>-</button></td>
                                 <td><button class="rounded-3 border border-2 border-dark" onClick={() => handleDelete(C.id)}>Delete</button></td>
+
+
                             </tr>
                         )
                     })
                 }
             </table>
-            <button class="btn btn-success me-5" type='button' onClick={() => handleNext()}>Next</button>
+            <NavLink to={{
+                pathname: '/nextaddtocart'
+            }}>
+                <button class="rounded-3 border border-2 border-dark" type='button' onClick={() => handleNext()}>Next</button>
+            </NavLink>
         </div>
     );
 }

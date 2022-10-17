@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Button, FormGroup, Input, Label } from 'reactstrap';
 import * as yup from 'yup';
-import { dataAction, getData, submitAction } from '../../Redux/Action/auth.action';
+import { addData, dataAction, getData, submitAction } from '../../Redux/Action/auth.action';
 
 function Nextaddtocart(props) {
     const [useType, setUseType] = useState("Submit");
@@ -34,8 +34,8 @@ function Nextaddtocart(props) {
         }
     }
 
-    const handleSub = () => {
-        dispatch(submitAction())
+    let handleSubmit = (values) => {
+        dispatch(getData())
         history.push("/")
     }
 
@@ -43,20 +43,10 @@ function Nextaddtocart(props) {
     const formik = useFormik({
         initialValues: initiValue,
         validationSchema: schema,
-        onSubmit: (values, { resetForm }) => {
-            sessionStorage.setItem("user", "Successfully Submit")
-
-            if (useType === "Submit") {
-
-                let data = {
-                    name: values.name,
-                    email: values.email,
-                    phone: values.phone,
-                    address: values.address
-                }
-                dispatch(dataAction(data))
+        onSubmit: values => {
+            if (values) {
+                handleSubmit(values);
             }
-            resetForm()
         },
     });
 
@@ -140,8 +130,8 @@ function Nextaddtocart(props) {
                                 }
                                 {
                                     <div className="text-center">
-                                        <Button type='submit'
-                                            className="appointment-btn scrollto m-0 mb-2" onClick={() => handleSub()}>Submit</Button>
+                                        <Button type='button'
+                                            className="appointment-btn scrollto m-0 mb-2" onClick={() => handleSubmit()}>Submit</Button>
                                     </div>
                                 }
                             </Form>
