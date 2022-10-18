@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useHistory } from 'react-router-dom';
-import { getData } from '../../Redux/Action/auth.action';
-import { IncrementCounter, DecrementCounter, DeleteCart, NextaddtocartAction } from '../../Redux/Action/Cart.action'
+import { useHistory } from 'react-router-dom';
+import { getOrder } from '../../Redux/Action/Addtocart.action';
+import { IncrementCounter, DecrementCounter, DeleteCart} from '../../Redux/Action/Cart.action'
 
 function Addtocart(props) {
     const Filterdata = [];
@@ -24,8 +24,15 @@ function Addtocart(props) {
     }
 
     const handleNext = () => {
-        dispatch(NextaddtocartAction())
-        history.push("/nextaddtocart")
+        console.log("hello"
+        );
+        // dispatch(NextaddtocartAction())
+        history.push({
+            pathname: "/nextaddtocart",
+            state: {  // location state
+                data: Filterdata,
+            }
+        })
     }
 
     Cart.Cart.map(C => Product.Product.map((P) => {
@@ -41,7 +48,7 @@ function Addtocart(props) {
 
     useEffect(
         () => {
-            dispatch(getData())
+            dispatch(getOrder())
         },
         [])
 
@@ -82,11 +89,9 @@ function Addtocart(props) {
                     })
                 }
             </table>
-            <NavLink to={{
-                pathname: '/nextaddtocart'
-            }}>
+            
                 <button class="rounded-3 border border-2 border-dark" type='button' onClick={() => handleNext()}>Next</button>
-            </NavLink>
+            
         </div>
     );
 }

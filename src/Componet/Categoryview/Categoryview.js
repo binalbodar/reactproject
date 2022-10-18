@@ -31,7 +31,6 @@ function Categoryview(props) {
                                 <h4 className='d-flex'>Name={a.name}</h4> <hr/> 
                                 <h4 className='d-flex'>Price={a.price}</h4> <hr/>
                                 <h4 className='d-flex'>Discription={a.discription}</h4> <hr/>
-                                
                                 <button className='btn btn-success me-5' type='button' onClick={() => addToCart(a)}>Add To Cart</button>
                             </div>
                         </section>

@@ -199,7 +199,6 @@ function Login(props) {
                                                 onClick={() => setUseType("Login")}>Login</Button>
                                         </div>
                                 }
-                                <button type='button' onClick={() => googlehandelsignup()} className='btn btn-secondary text-center'>SignIn With Google</button>
                             </Form>
                         </Formik>
                     </div>

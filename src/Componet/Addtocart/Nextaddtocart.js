@@ -1,20 +1,33 @@
+import { useSelect } from '@mui/base';
 import { Form, Formik, useFormik } from 'formik';
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Button, FormGroup, Input, Label } from 'reactstrap';
 import * as yup from 'yup';
-import { addData, dataAction, getData, submitAction } from '../../Redux/Action/auth.action';
+import { addOrder, getOrder } from '../../Redux/Action/Addtocart.action';
 
 function Nextaddtocart(props) {
     const [useType, setUseType] = useState("Submit");
     const history = useHistory()
+    const [open, setOpen] = useState(false);
+    const [dopen, setDOpen] = useState(false);
+    const [name, setName] = useState('');
+
+    const addtocart = useSelector(state => state.Cart)
+
+    console.log(props.location.state.data);
 
     useEffect(
         () => {
-            dispatch(getData())
+            dispatch(getOrder())
         },
         [])
+
+        const handleClose = () => {
+            setOpen(false);
+            setDOpen(false);
+        };
     let Submit = {
         name: yup.string().required("Please Enter Your Name"),
         email: yup.string().email("Please Enter Valid Email").required("Please Enter Your Email"),
@@ -34,9 +47,11 @@ function Nextaddtocart(props) {
         }
     }
 
-    let handleSubmit = (values) => {
-        dispatch(getData())
-        history.push("/")
+    const handleSubmit = (values) => {
+        console.log({ ...values, data: props.location.state.data });
+        dispatch(addOrder(values))
+        handleClose();
+        setName('');
     }
 
     const dispatch = useDispatch()
@@ -44,6 +59,7 @@ function Nextaddtocart(props) {
         initialValues: initiValue,
         validationSchema: schema,
         onSubmit: values => {
+            console.log(values);
             if (values) {
                 handleSubmit(values);
             }
@@ -130,8 +146,7 @@ function Nextaddtocart(props) {
                                 }
                                 {
                                     <div className="text-center">
-                                        <Button type='button'
-                                            className="appointment-btn scrollto m-0 mb-2" onClick={() => handleSubmit()}>Submit</Button>
+                                        <Button className="appointment-btn scrollto m-0 mb-2" type="submit" >Submit</Button>
                                     </div>
                                 }
                             </Form>
