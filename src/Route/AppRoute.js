@@ -15,6 +15,7 @@ import PublicRoute from "../Route/PublicRoute";
 import PrivateRoute from "../Route/PrivateRoute";
 import ClinetRoute from '../Route/ClinetRoute';
 import Nextaddtocart from '../Componet/Addtocart/Nextaddtocart';
+import Cartformdisplay from '../Componet/Cartformdisplay/Cartformdisplay';
 
 function AppRoute(props) {
     return (
@@ -32,6 +33,7 @@ function AppRoute(props) {
                 <PrivateRoute exact path={"/addtocart"} component={Addtocart} />
                 <PublicRoute exact path={"/login"} restricted={true} component={Login} />
                 <PrivateRoute exact path={"/nextaddtocart"} component={Nextaddtocart} />
+                <PrivateRoute exact path={"/cartformdisplay"} component={Cartformdisplay} />
             </Switch>
         </div>
     );

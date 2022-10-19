@@ -23,6 +23,7 @@ export const errorOrder = (error) => (dispach) => {
 
 //ADD DATA
 export const addOrder = (data) => async (dispatch) => {
+    console.log("dddddddddddddddddddddd", data);
     try {
         const randomdoc = Math.floor(Math.random() * 1000000).toString();
         const orderRef = ref(storage, 'order/' + randomdoc);
@@ -35,6 +36,7 @@ export const addOrder = (data) => async (dispatch) => {
                             email: data.email,
                             phone: data.phone,
                             address: data.address,
+                            data: data.data
                         })
                         dispatch({
                             type: ActionTypes.POST_DATA,
@@ -43,6 +45,7 @@ export const addOrder = (data) => async (dispatch) => {
                                 email: data.email,
                                 phone: data.phone,
                                 address: data.address,
+                                data: data.data
                             }
                         })
                     });

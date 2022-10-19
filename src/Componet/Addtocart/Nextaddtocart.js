@@ -48,8 +48,7 @@ function Nextaddtocart(props) {
     }
 
     const handleSubmit = (values) => {
-        console.log({ ...values, data: props.location.state.data });
-        dispatch(addOrder(values))
+        dispatch(addOrder({ ...values, data: props.location.state.data }))
         handleClose();
         setName('');
     }
@@ -62,6 +61,7 @@ function Nextaddtocart(props) {
             console.log(values);
             if (values) {
                 handleSubmit(values);
+                history.push("/cartformdisplay")
             }
         },
     });

@@ -3,6 +3,7 @@ import { addtocartReducer } from './Addtocart.reducer';
 import { alertReduser } from './alert.reduser';
 import { authReducer } from './auth.reducer';
 import { cartReduser } from './Cart.reduser';
+import { cartformReduser } from './Cartform.reduser';
 import { categoryReducer } from './Categary.reduser';
 import { ProductReduser } from './Product.reduser';
 export const rootReducer = combineReducers({
@@ -11,5 +12,6 @@ export const rootReducer = combineReducers({
     Cart: cartReduser,
     auth: authReducer,
     addtocart:addtocartReducer,
-    alert: alertReduser
+    alert: alertReduser,
+    Cartform: cartformReduser
 })
