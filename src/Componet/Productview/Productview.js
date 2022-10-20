@@ -22,7 +22,7 @@ function Productview(props) {
 
     return (
         <>
-            <h2>Product</h2>
+            <h2>Add To Cart</h2>
             {
                 filterData.map((a) => {
                     return (

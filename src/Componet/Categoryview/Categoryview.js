@@ -21,7 +21,7 @@ function Categoryview(props) {
 
     return (
         <>
-            <h2>Categary</h2>
+            <h2>Add To Cart</h2>
             {
                 filter.map((a) => {
                     return (
