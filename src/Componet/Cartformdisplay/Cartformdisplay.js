@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCartform } from '../../Redux/Action/Cartform.action';
 
 function Cartformdisplay(props) {
-    const Filterdata = [];
-    const CartForm = useSelector(state => state.CartForm) 
+    const CartForm = useSelector(state => state.Cartform)
     const dispatch = useDispatch()
 
     useEffect(
@@ -12,6 +11,8 @@ function Cartformdisplay(props) {
             dispatch(getCartform())
         },
         [])
+
+    console.log(CartForm);
 
     return (
         <div>
@@ -25,22 +26,28 @@ function Cartformdisplay(props) {
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Address</th>
-                        <th>Price</th>
                         <th>Quantity</th>
+                        <th>Price</th>
                     </tr>
                 </thead>
 
                 {
-                    Filterdata.map((D, C) => {
+                    CartForm.CartForm.map((C) => {
                         return (
                             <tr>
-                                <td><img src={C.url} alt="" width={100} /></td>
-                                <td>{D.name}</td>
-                                <td>{D.email}</td>
-                                <td>{D.phone}</td>
-                                <td>{D.address}</td>
-                                <td>{C.price}</td>
-                                <td>{C.qunty}</td>
+                                {C.data.map((D) => {
+                                    return (
+                                        <>
+                                            <td><img src={D.url} alt="" width={100} /></td>
+                                            <td>{C.name}</td>
+                                            <td>{C.email}</td>
+                                            <td>{C.phone}</td>
+                                            <td>{C.address}</td>
+                                            <td>{D.qunty}</td>
+                                            <td>{D.price}</td>
+                                        </>
+                                    )
+                                })}
                             </tr>
                         )
                     })

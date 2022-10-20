@@ -20,7 +20,7 @@ export const cartformReduser = (state = initialstate, action) => {
             return {
                 ...state,
                 isLoading: false,
-                Category: [],
+                CartForm: [],
                 error: action.payload
             }
         case ActionTypes.ADD_CARTFORM:

@@ -1,4 +1,4 @@
-import { collection, getDoc } from "firebase/firestore";
+import { collection, getDoc, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 import * as ActionTypes from "../ActionType"
 
@@ -6,10 +6,11 @@ import * as ActionTypes from "../ActionType"
 export const getCartform = () => async (dispatch) => {
     try {
         let data = [];
-        const querySnapshot = await getDoc(collection(db, "Order"));
+        const querySnapshot = await getDocs(collection(db, "Order"));
         querySnapshot.forEach((doc) => {
             data.push({ id: doc.id, ...doc.data() })
         });
+        console.log(data);
         dispatch({ type: ActionTypes.GET_CARTFORM, payload: data })
     } catch (error) {
         dispatch(errorCartform(error.message))
