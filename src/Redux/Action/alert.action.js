@@ -1,4 +1,4 @@
-import * as ActionTypes from "../ActionTypes";
+import * as ActionTypes from "../ActionType";
 
 export const setAlert= (data) => (dispatch) =>{
     dispatch({type: ActionTypes.SET_ALERT, payload:data})
